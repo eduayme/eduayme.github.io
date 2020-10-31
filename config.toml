@@ -6,6 +6,8 @@ footnoteReturnLinkContents = "^"
 paginate = 10
 
 theme = "eduayme"
+baseURL = "https://eduayme.github.io/"
+publishDir = "docs"
 
 [params]
     author = "Eduard Aymerich"
