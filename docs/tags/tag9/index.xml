@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tag9 on Eduard Aymerich</title>
+    <link>https://eduayme.github.io/tags/tag9/</link>
+    <description>Recent content in tag9 on Eduard Aymerich</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://eduayme.github.io/tags/tag9/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3 My Third Post</title>
+      <link>https://eduayme.github.io/third-post/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduayme.github.io/third-post/</guid>
+      <description>This is the post summary</description>
+    </item>
+    
+  </channel>
+</rss>
