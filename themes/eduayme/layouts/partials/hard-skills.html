@@ -1,0 +1,46 @@
+{{ if .Site.Data.homepage.hardskills.enable }}
+    <div class="container-align">
+        <div class="left-small">
+            {{ .Site.Data.homepage.hardskills.title }}
+        </div>
+    </div>
+    {{ if .Site.Data.homepage.hardskills.items }}
+        <div class="cards-container">
+            {{ range .Site.Data.homepage.hardskills.items }}
+                <div class="column-10">
+                    <div class="card {{ .type }}">
+                        <div class="card-image-container">
+                            <img class="card-image" src="{{ .image }}">
+                        </div>
+                        <div class="card-content">
+                            <div class="title">{{ .name }}</div>
+                            <div class="subtitle"> {{ .level }} </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+    <div class="margin-bottom"></div>
+{{ end }}
+
+<style media="screen">
+    .margin-bottom {
+        margin-bottom: 10px;
+    }
+    .Language {
+        border-top-color: #8D74FF;
+    }
+    .ProgrammingLanguage {
+        border-top-color: #00F8FA;
+    }
+    .Framework {
+        border-top-color: #FFB91C;
+    }
+    .Database {
+        border-top-color: #FFA8F4;
+    }
+    .Other {
+        border-top-color: #FF4747;
+    }
+</style>

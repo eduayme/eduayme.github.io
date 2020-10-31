@@ -1,0 +1,16 @@
+{{ if .Site.Data.homepage.about.enable }}
+    <div class="inner posts" id="about">
+        <div class="container-align">
+            <div class="left">
+                {{ .Site.Data.homepage.about.title }}
+            </div>
+        </div>
+        <div class="no-padding">
+            {{ .Site.Data.homepage.about.content | safeHTML }}
+
+            {{- partial "experience.html" . -}}
+            {{- partial "education.html" . -}}
+            {{- partial "skills.html" . -}}
+        </div>
+    </div>
+{{ end }}

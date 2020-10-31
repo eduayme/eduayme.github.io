@@ -1,0 +1,37 @@
+{{ if .Site.Data.homepage.awards.enable }}
+    <div class="inner posts" id="awards">
+        <div class="container-align">
+            <div class="left">
+                {{ .Site.Data.homepage.awards.title }}
+            </div>
+        </div>
+        {{ if .Site.Data.homepage.awards.items }}
+            <div class="no-padding container cards-container">
+                {{ range .Site.Data.homepage.awards.items }}
+                    <div class="column-5">
+                        <div class="card awards">
+                            <div class="card-image-container-big">
+                                <img class="card-image card-image-big" src="{{ .image }}">
+                            </div>
+                            <div class="card-content">
+                                <div class="title"> {{ .name }} </div>
+                                <div class="subtitle"> {{ .organisation }} </div>
+                                <div class="subtitle"> {{ .date }} </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    </div>
+{{ end }}
+
+<style media="screen">
+    .awards {
+        border-top-color: #00b20e;
+        height: 230px;
+    }
+    .margin-bottom {
+        margin-bottom: 10px;
+    }
+</style>

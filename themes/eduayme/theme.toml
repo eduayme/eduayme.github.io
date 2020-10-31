@@ -1,0 +1,12 @@
+name = "eduayme"
+license = "MIT"
+licenselink = "https://github.com/eduayme/eduayme-hugo-theme/blob/master/LICENSE"
+description = "A nice blog developed in Hugo"
+tags = ["blog", "dark"]
+features = ["darkmode"]
+min_version = "0.54.0"
+
+[author]
+  name = "Eduard Aymerich"
+  homepage = "https://eduayme.github.io"
+  repo = "https://github.com/eduayme/eduayme-hugo-theme"

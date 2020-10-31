@@ -1,0 +1,36 @@
+title = "Eduard Aymerich"
+author = "Eduard Aymerich"
+languageCode = "en-us"
+enableInlineShortcodes = true
+footnoteReturnLinkContents = "^"
+paginate = 10
+
+theme = "eduayme"
+
+[params]
+    author = "Eduard Aymerich"
+    info = "Frontend Developer"
+    linkedin = "https://linkedin.com/in/eduayme"
+    github = "https://github.com/eduayme"
+
+[menu]
+    [[menu.main]]
+        identifier = "about"
+        name = "about"
+        url = "/#about"
+        weight = 2
+    [[menu.main]]
+        identifier = "portfolio"
+        name = "portfolio"
+        url = "/#portfolio"
+        weight = 3
+    [[menu.main]]
+        identifier = "blog"
+        name = "blog"
+        url = "/#latest-posts"
+        weight = 4
+    [[menu.main]]
+        identifier = "contact"
+        name = "contact"
+        url = "/#contact"
+        weight = 5

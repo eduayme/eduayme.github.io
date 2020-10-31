@@ -1,0 +1,41 @@
+{{ if .Site.Data.homepage.softskills.enable }}
+    <div class="container-align">
+        <div class="left-small">
+            {{ .Site.Data.homepage.softskills.title }}
+        </div>
+        <div class="right">
+            {{ .Site.Data.homepage.softskills.endorsed }}
+        </div>
+    </div>
+    {{ if .Site.Data.homepage.softskills.items }}
+        <div class="container cards-container">
+            {{ range .Site.Data.homepage.softskills.items }}
+                <div class="column-5">
+                    <div class="card softskill">
+                        <div class="card-image-container-big">
+                            <img class="card-image card-image-big" src="{{ .image }}">
+                        </div>
+                        <div class="card-content">
+                            <div class="title"> {{ .name }} </div>
+                        </div>
+                    </div>
+                </div>
+            {{ end }}
+        </div>
+    {{ end }}
+    <div class="margin-bottom"></div>
+{{ end }}
+
+<style media="screen">
+    .right {
+        color: #74ff8d;
+        font-size: 12px;
+    }
+    .softskill {
+        border-top-color: #74ff8d;
+        height: 175px;
+    }
+    .margin-bottom {
+        margin-bottom: 10px;
+    }
+</style>

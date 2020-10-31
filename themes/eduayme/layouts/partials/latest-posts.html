@@ -1,0 +1,22 @@
+<div class="inner posts" id="latest-posts">
+    <div class="container-align">
+        <div class="left">
+            Latest posts
+        </div>
+        <div class="right">
+            <a href="/blog"> See all posts > </a>
+        </div>
+    </div>
+    <div class="post-feed no-padding margin-bottom-50">
+        {{ $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+        {{ range $index, $element := $pages | first 3 }}
+            {{- partial "list-card.html" (dict "context" . "index" $index) -}}
+        {{ end }}
+    </div>
+</div>
+
+<style media="screen">
+    .margin-bottom-50 {
+        margin-bottom: 50px;
+    }
+</style>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    {{ $title := print .Title " · " .Site.Title }}
+    {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
+    <title>{{ $title }}</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    {{ $styles := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" />
+    <link rel='icon' href='/favicon-32x32.png' type='image/x-icon'/ >
+
+</head>
+<body class="{{ block "body_class" . }} {{ end }}">
+
+    <div class="site-wrapper">
+        {{- block "main" . }}{{- end }}
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> &copy; {{ .Date.Format "2006" }}</section>
+                <nav class="site-footer-nav">
+                    {{ if .Site.Params.linkedin }}
+                        <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">
+                            Linkedin
+                        </a>
+                    {{ end }}
+                    {{ if .Site.Params.twitter }}
+                        <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener">
+                            Twitter
+                        </a>
+                    {{ end }}
+                    {{ if .Site.Params.github }}
+                        <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">
+                            Github
+                        </a>
+                    {{ end }}
+                    {{ if .Site.Params.instagram }}
+                        <a href="{{ .Site.Params.behance }}" target="_blank" rel="noopener">
+                            Behance
+                        </a>
+                    {{ end }}
+                    {{ if .Site.Params.behance }}
+                        <a href="{{ .Site.Params.behance }}" target="_blank" rel="noopener">
+                            Behance
+                        </a>
+                    {{ end }}
+                    {{ if .Site.Params.uplabs }}
+                        <a href="{{ .Site.Params.uplabs }}" target="_blank" rel="noopener">
+                            Uplabs
+                        </a>
+                    {{ end }}
+                    <a style="opacity: 0.5;">
+                        Website by Eduard Aymerich
+                    </a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<nav class="site-nav">
+    <div class="site-nav-left">
+        <a href="/">
+            {{ if eq $.Site.Params.logo "thisshouldfail" }}
+                <img src="{{ $.Site.Params.logo }}" alt="{{ $.Site.Title }}" />
+            {{ else }}
+                <div class="site-nav-logo">{{ $.Site.Title }}</div>
+            {{ end }}
+        </a>
+
+        <div class="site-nav-content">
+            <ul class="nav" role="menu" id="topNav">
+                {{ range sort $.Site.Menus.main "Weight" }}
+                    <li class="nav-home" role="menuitem" id="{{- .Name -}}">
+                        <a href="{{ .URL }}">
+                            {{- .Name -}}
+                        </a>
+                    </li>
+                {{ end }}
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<style>
+@media screen and (max-width: 800px) {
+    .site-nav-logo {
+        font-size: 14px;
+    }
+    .nav li a {
+        font-size: 10px;
+        padding: 5px 15px;
+    }
+    .nav li a:last-child {
+        padding: 12px 15px;
+    }
+}
+</style>

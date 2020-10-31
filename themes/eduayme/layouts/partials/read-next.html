@@ -1,0 +1,26 @@
+{{ if .Params.tags }}
+    <article class="read-next-card">
+        <header class="read-next-card-header">
+            Related posts
+        </header>
+        <div class="read-next-card-content">
+            {{ $related := .Site.RegularPages.Related . | first 5 }}
+            {{ with $related }}
+            <ul>
+                {{ range . }}
+                    <li>
+                        <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                        <div class="read-next-card-meta">
+                            <p>
+                                <time datetime="{{.Date.Format "2006-31-01"}}">{{.Date.Format "01 Jan 2006"}}</time>
+                                <span class="bull">&bull;</span>
+                                {{ .ReadingTime }} min read
+                            </p>
+                        </div>
+                    </li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </div>
+    </article>
+{{ end }}

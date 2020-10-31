@@ -1,0 +1,86 @@
+{{ if .Site.Data.homepage.experience.enable }}
+    <div class="inner posts" id="banner">
+        <div class="container-align margin-bottom" id="banner-info">
+
+        </div>
+        <div class="container-align margin-bottom" id="banner-experience">
+            <div class="center">
+                <span> Experience working in </span>
+            </div>
+            <div class="container padding-sides">
+                {{ range .Site.Data.homepage.experience.items }}
+                    {{ if .banner_logos }}
+                        <div class="column-logo-5">
+                            <span class="helper"></span>
+                            <img class="logo" src="{{ .logo }}">
+                        </div>
+                    {{ end }}
+                {{ end }}
+            </div>
+        </div>
+    </div>
+{{ end }}
+
+<style media="screen">
+    #banner-experience {
+        height: 100%;
+        overflow: hidden;
+    }
+    .center {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255,255,255,.75);
+        line-height: 0.1em;
+        margin: 10px 0 20px;
+    }
+    .center span {
+        background: #191b1f;
+        padding: 0 15px;
+    }
+    .padding-sides {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .column-logo-5 {
+        width: 16%;
+        height: 100px;
+        margin: 0 2%;
+        padding: 20px;
+        text-align: center;
+        white-space: nowrap;
+        float: left;
+        filter: brightness(0) invert(1);
+        border-radius: 5px;
+    }
+    .column-logo-5:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-color: white;
+        filter: none;
+    }
+    @media screen and (max-width: 600px) {
+        .column-logo-5 {
+            width: 30%;
+            margin: 0 1.65%;
+        }
+    }
+    .padding-sides a {
+        color: transparent;
+    }
+    .logo {
+        margin: auto;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .helper {
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+    }
+    img {
+        vertical-align: middle;
+        height: 60px;
+    }
+</style>
