@@ -19,20 +19,20 @@ publishDir = "docs"
     [[menu.main]]
         identifier = "about"
         name = "about"
-        url = "/#about"
+        url = "/about"
         weight = 2
     [[menu.main]]
         identifier = "portfolio"
         name = "portfolio"
-        url = "/#portfolio"
+        url = "/portfolio"
         weight = 3
     [[menu.main]]
         identifier = "blog"
         name = "blog"
-        url = "/#latest-posts"
+        url = "/blog"
         weight = 4
     [[menu.main]]
         identifier = "contact"
         name = "contact"
-        url = "/#contact"
+        url = "/contact"
         weight = 5
