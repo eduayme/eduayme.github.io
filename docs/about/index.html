@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     
-    <link rel="stylesheet" href="https://eduayme.github.io/style.main.min.c65a42c1442d985fd6761daba4a8a3cef041b192d0a5cd05298899d53c279fa7.css" />
+    <link rel="stylesheet" href="https://eduayme.github.io/style.main.min.03e520ea389d2d18f267109ff8e068a62536639d7fe99d213d906763bd740c5e.css" />
     <link rel='icon' href='/favicon-32x32.png' type='image/x-icon'/ >
 
 </head>
@@ -33,19 +33,19 @@
             <ul class="nav" role="menu" id="topNav">
                 
                     <li class="nav-home" role="menuitem" id="about">
-                        <a href="/#about">about</a>
+                        <a href="/about">about</a>
                     </li>
                 
                     <li class="nav-home" role="menuitem" id="portfolio">
-                        <a href="/#portfolio">portfolio</a>
+                        <a href="/portfolio">portfolio</a>
                     </li>
                 
                     <li class="nav-home" role="menuitem" id="blog">
-                        <a href="/#latest-posts">blog</a>
+                        <a href="/blog">blog</a>
                     </li>
                 
                     <li class="nav-home" role="menuitem" id="contact">
-                        <a href="/#contact">contact</a>
+                        <a href="/contact">contact</a>
                     </li>
                 
             </ul>
@@ -514,15 +514,48 @@
         border-top-color: #FF4747;
     }
 </style>
-<div class="inner posts" id="contact">
-    <div class="container-align">
-        <div class="left">
-            Publications
+
+    <div class="inner posts" id="publications">
+        <div class="container-align">
+            <div class="left">
+                Publications
+            </div>
         </div>
+        
+            
+                <a href="#" class="column-4">
+                    <img class="card-image card-image-publication" src="/bachelor_thesis.png">
+                    <div class="title title-award"> Bachelors Thesis </div>
+                    <div class="subtitle"> University of Girona </div>
+                    <div class="subtitle"> June 2019 </div>
+                </a>
+            
+        
     </div>
-    <div class="no-padding">
-        publications
-    </div>
+
+
+<style media="screen">
+    .margin-bottom-50 {
+        margin-bottom: 50px;
+    }
+    .card-image-publication {
+        max-height: 300px;
+        min-height: 300px;
+        position: relative;
+    }
+    .title {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .column-4 {
+        text-align: center;
+        color: rgba(255,255,255,.75);
+    }
+</style>
 </div>
 
     <div class="inner posts" id="awards">
@@ -540,7 +573,7 @@
                                 <img class="card-image card-image-big" src="/udg.jpeg">
                             </div>
                             <div class="card-content">
-                                <div class="title"> Best Final Project in my Bachelor’s promotion </div>
+                                <div class="title title-award"> Best Final Project in my Bachelor’s promotion </div>
                                 <div class="subtitle"> University of Girona </div>
                                 <div class="subtitle"> July 2020 </div>
                             </div>
@@ -553,7 +586,7 @@
                                 <img class="card-image card-image-big" src="/mundodeportivo.png">
                             </div>
                             <div class="card-content">
-                                <div class="title"> Champions 2017 </div>
+                                <div class="title title-award"> Champions 2017 </div>
                                 <div class="subtitle"> Mundo Deportivo </div>
                                 <div class="subtitle"> October 2017 </div>
                             </div>
@@ -566,7 +599,7 @@
                                 <img class="card-image card-image-big" src="/esportiu_cat.jpg">
                             </div>
                             <div class="card-content">
-                                <div class="title"> Excellence in Girona sports </div>
+                                <div class="title title-award"> Excellence in Girona sports </div>
                                 <div class="subtitle"> L&#39;Esportiu de Catalunya </div>
                                 <div class="subtitle"> October 2017 </div>
                             </div>
@@ -579,7 +612,7 @@
                                 <img class="card-image card-image-big" src="/federacio_escacs_cat.jpg">
                             </div>
                             <div class="card-content">
-                                <div class="title"> Catalan Chess Master </div>
+                                <div class="title title-award"> Catalan Chess Master </div>
                                 <div class="subtitle"> Catalan Chess Federation </div>
                                 <div class="subtitle"> March 2017 </div>
                             </div>
@@ -592,7 +625,7 @@
                                 <img class="card-image card-image-big" src="/federacio_escacs_cat.jpg">
                             </div>
                             <div class="card-content">
-                                <div class="title"> Girona Absolute Chess Champion 2015 </div>
+                                <div class="title title-award"> Girona Absolute Chess Champion 2015 </div>
                                 <div class="subtitle"> Catalan Chess Federation </div>
                                 <div class="subtitle"> November 2015 </div>
                             </div>
@@ -611,6 +644,15 @@
     }
     .margin-bottom {
         margin-bottom: 10px;
+    }
+    .title-award {
+        min-height: 50px;
+    }
+    @media screen and (max-width: 600px) {
+        .title-award {
+            font-size: 12px !important;
+            line-height: 1.5;
+        }
     }
 </style>
 </div>
