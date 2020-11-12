@@ -14,7 +14,7 @@
                                 <img class="card-image card-image-big" src="{{ .image }}">
                             </div>
                             <div class="card-content">
-                                <div class="title"> {{ .name }} </div>
+                                <div class="title title-award"> {{ .name }} </div>
                                 <div class="subtitle"> {{ .organisation }} </div>
                                 <div class="subtitle"> {{ .date }} </div>
                             </div>
@@ -33,5 +33,14 @@
     }
     .margin-bottom {
         margin-bottom: 10px;
+    }
+    .title-award {
+        min-height: 50px;
+    }
+    @media screen and (max-width: 600px) {
+        .title-award {
+            font-size: 12px !important;
+            line-height: 1.5;
+        }
     }
 </style>

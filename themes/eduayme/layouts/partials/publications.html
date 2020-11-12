@@ -1,10 +1,43 @@
-<div class="inner posts" id="contact">
-    <div class="container-align">
-        <div class="left">
-            Publications
+{{ if .Site.Data.homepage.publications.enable }}
+    <div class="inner posts" id="publications">
+        <div class="container-align">
+            <div class="left">
+                {{ .Site.Data.homepage.publications.title }}
+            </div>
         </div>
+        {{ if .Site.Data.homepage.publications.items }}
+            {{ range .Site.Data.homepage.publications.items }}
+                <a href="#" class="column-4">
+                    <img class="card-image card-image-publication" src="{{ .image }}">
+                    <div class="title title-award"> {{ .name }} </div>
+                    <div class="subtitle"> {{ .organisation }} </div>
+                    <div class="subtitle"> {{ .date }} </div>
+                </a>
+            {{ end }}
+        {{ end }}
     </div>
-    <div class="no-padding">
-        publications
-    </div>
+{{ end }}
+
+<style media="screen">
+    .margin-bottom-50 {
+        margin-bottom: 50px;
+    }
+    .card-image-publication {
+        max-height: 300px;
+        min-height: 300px;
+        position: relative;
+    }
+    .title {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .subtitle {
+        font-size: 14px;
+    }
+    .column-4 {
+        text-align: center;
+        color: rgba(255,255,255,.75);
+    }
+</style>
 </div>
