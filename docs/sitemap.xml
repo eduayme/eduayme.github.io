@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eduayme.github.io/fourth-post/</loc>
-    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://eduayme.github.io/blog/</loc>
     <lastmod>2020-08-04T00:00:00+00:00</lastmod>
   </url>
@@ -23,7 +18,12 @@
   </url>
   
   <url>
-    <loc>https://eduayme.github.io/tags/tag1/</loc>
+    <loc>https://eduayme.github.io/example-post/</loc>
+    <lastmod>2020-08-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/open-source/</loc>
     <lastmod>2020-08-04T00:00:00+00:00</lastmod>
   </url>
   
@@ -45,56 +45,6 @@
   <url>
     <loc>https://eduayme.github.io/categories/tech/</loc>
     <lastmod>2020-08-04T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/third-post/</loc>
-    <lastmod>2020-08-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/tag8/</loc>
-    <lastmod>2020-08-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/tag9/</loc>
-    <lastmod>2020-08-03T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/second-post/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/tag2/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/tag3/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/tag4/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/tag5/</loc>
-    <lastmod>2020-08-02T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/first-blog/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/categories/bla/</loc>
-    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>

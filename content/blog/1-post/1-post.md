@@ -1,14 +1,14 @@
 ---
-title: "4 My Fourth Post"
+title: "My Example Post"
 summary: "This is the post summary"
 date: 2020-08-04
-url: fourth-post
-feature_image: "/blog/4-my-fourth-post/img/cute_cat.jpg"
-author: Eduard Aymerich
+url: example-post
+feature_image: "/blog/1-post/img/cute_cat.jpg"
+author:
 categories:
     - Tech
 tags:
-    - tag1
+    - Open Source
     - tag6
     - tag7
 ---
