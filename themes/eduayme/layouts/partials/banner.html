@@ -1,7 +1,9 @@
-{{ if .Site.Data.homepage.experience.enable }}
+{{ if .Site.Data.homepage.banner.enable }}
     <div class="inner posts" id="banner">
         <div class="container-align margin-bottom" id="banner-info">
-
+            <h1> {{ .Site.Data.homepage.banner.title }} </h1>
+            <h2> {{ .Site.Data.homepage.banner.subtitle }} </h2>
+            <h4> {{ .Site.Data.homepage.banner.description | safeHTML }} </h4>
         </div>
         <div class="container-align margin-bottom" id="banner-experience">
             <div class="center">
@@ -22,9 +24,23 @@
 {{ end }}
 
 <style media="screen">
-    #banner-experience {
-        height: 100%;
+    #banner-info {
+        height: 40vh;
         overflow: hidden;
+    }
+    #banner-experience {
+        height: 30vh;
+        overflow: hidden;
+    }
+    h1 {
+        color: #dd911a;
+    }
+    h2 {
+        color: #f1c784;
+    }
+    h4 {
+        margin-top: 60px;
+        line-height: 2;
     }
     .center {
         width: 100%;

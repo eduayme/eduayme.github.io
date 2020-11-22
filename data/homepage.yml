@@ -1,9 +1,13 @@
-# showcase
-showcase:
+# banner
+banner:
   enable: true
-  title: "Hello, I’m Edu!"
+  title: "Hi, I’m Edu!"
   subtitle: "Front-End Developer"
-  description: "I work at <a target='_blank' href='https://etsfactory.com/'>ETS Factory</a> developing software in investment strategies for international institutions. I am also a semiprofesional chess player with +2.200 FIDE ELO (top 10k players in the world). In my free time I enjoy cinema, books and contributing to Open Source projects."
+  description: "Currently at <a target='_blank' href='https://etsfactory.com/'>ETS Factory</a> developing software in investment strategies for international institutions.
+  <br>
+  Chess player with +2.200 FIDE ELO in top 1% (best 10k players in the world).
+  <br>
+  In my free time I enjoy cinema, books and Open Source."
   image: "/me.png"
 
 # about
