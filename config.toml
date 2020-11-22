@@ -11,9 +11,12 @@ publishDir = "docs"
 
 [params]
     author = "Eduard Aymerich"
-    info = "Frontend Developer"
     linkedin = "https://linkedin.com/in/eduayme"
     github = "https://github.com/eduayme"
+    instagram = ""
+    uplabs = ""
+    dribble = ""
+    codepen = ""
 
 [menu]
     [[menu.main]]

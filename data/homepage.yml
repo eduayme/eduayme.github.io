@@ -1,29 +1,10 @@
 # showcase
 showcase:
   enable: true
-  title: "Hello, I’m Andreas."
+  title: "Hello, I’m Edu!"
   subtitle: "Front-End Developer"
-  description: "I work at <a target='_blank' href='https://radity.com/'>Radity</a>, a software development company in Switzerland. And I am a Raditian. You get the idea where theme name comes from. Keep cool, stay in touch. You can download this theme from <a target='_blank' href='https://github.com/radity/raditian-free-hugo-theme'>github</a>."
-  image: "img/showcase/showcase.png"
-
-  socialLinks:
-    - icon: "linkedin"
-      URL: "https://www.linkedin.com/company/radity/"
-
-    - icon: "github"
-      URL: "https://github.com/radity"
-
-    - icon: "twitter"
-      URL: "https://twitter.com/radity"
-
-    - icon: "dribbble"
-      URL: "https://dribbble.com/radity"
-
-    - icon: "instagram"
-      URL: "https://www.instagram.com/teamradity/"
-
-    - icon: "codepen"
-      URL: "#"
+  description: "I work at <a target='_blank' href='https://etsfactory.com/'>ETS Factory</a> developing software in investment strategies for international institutions. I am also a semiprofesional chess player with +2.200 FIDE ELO (top 10k players in the world). In my free time I enjoy cinema, books and contributing to Open Source projects."
+  image: "/me.png"
 
 # about
 about:
@@ -39,9 +20,6 @@ about:
     leading of design & front-end teams. I enjoy designing and coding the UI as much as
     talking with users to iterate and improve the experiences that reach business goals.
     </p>'
-  image:
-    x: "img/who-am-i/user-picture.png"
-    _2x: "img/who-am-i/user-picture@2x.png"
 
 # experience
 experience:

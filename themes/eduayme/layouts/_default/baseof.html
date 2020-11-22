@@ -24,7 +24,7 @@
 
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> &copy; {{ .Date.Format "2006" }}</section>
+                <section class="copyright"><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a> &copy; {{ now.Format "2006" }}</section>
                 <nav class="site-footer-nav">
                     {{ if .Site.Params.linkedin }}
                         <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">
