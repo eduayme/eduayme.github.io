@@ -1,8 +1,48 @@
-<div class="container-align">
-    <div class="left-small">
-        Experience
+{{ if .Site.Data.homepage.experience.enable }}
+    <div class="container-align">
+        <div class="left">
+            {{ .Site.Data.homepage.experience.title }}
+        </div>
     </div>
-</div>
-<div class="container">
-    content
-</div>
+    {{ if .Site.Data.homepage.experience.items }}
+        {{ range .Site.Data.homepage.experience.items }}
+            <div class="experience">
+                <div class="container-align no-bottom">
+                    <div class="left-small">
+                        {{ .title }}
+                    </div>
+                    <div class="right-small">
+                        {{ .company }} | {{ .duration }} | {{ .location }}
+                    </div>
+                </div>
+                <div class="description">
+                    {{ .description }}
+                </div>
+                {{ range .skills }}
+                    <div class="skill {{ . }}">
+                        {{ . }}
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}
+    <div class="margin-bottom"></div>
+{{ end }}
+
+<style media="screen">
+    .no-bottom {
+        margin-bottom: 25px;
+    }
+    .right-small {
+        float: right;
+    }
+    .skill {
+        display: inline-block;
+        margin: 10px 10px 10px 0;
+        padding: 0 10px;
+        border-radius: 50px;
+        background-color: purple;
+        color: white;
+        font-size: 12px;
+    }
+</style>

@@ -32,7 +32,7 @@ experience:
   items:
     - title: "Front-End Developer"
       company: "ETS Factory"
-      duration: "Jul 2020 - Current"
+      duration: "Jul. 2020 - Current"
       location: "Madrid, Spain"
       country: "/spain.png"
       description: "Software development related to recommending and managing investment funds"
@@ -53,7 +53,7 @@ experience:
 
     - title: "Software Engineer"
       company: "Qonsius Ventures"
-      duration: "August 2019 - November 2019"
+      duration: "Aug. 2019 - Nov. 2019"
       location: "Madrid, Spain"
       country: "/spain.png"
       description: "Building a platform from scratch to manage all activities inside the Venture Builder startup"
@@ -68,15 +68,12 @@ experience:
           - Python
           - Django
           - Bootstrap
-          - Google Cloud
           - Google Apps Script
-          - MySQL
           - Git
-          - Gitlab
 
     - title: "Front-End Developer"
       company: "University of Girona"
-      duration: "April 2019 - July 2019"
+      duration: "Apr. 2019 - Jul. 2019"
       location: "Girona, Spain"
       country: "/spain.png"
       description: "Wordpress themes creation for the University of Girona libraries"
@@ -94,7 +91,7 @@ experience:
 
     - title: "Software Intern (Tech Camp 2.0)"
       company: "Trivago"
-      duration: "April 2019 - July 2019"
+      duration: "Sep. 2018 - Sep. 2018"
       location: "Düsseldorf, Germany"
       country: "/germany.png"
       description: "Selected as 1 of the 10 top programmers winners of more than 150 participants in the Tech Camp 2.0 challenge"
@@ -114,11 +111,11 @@ experience:
           - Gitlab
 
     - title: "Software Intern"
-      company: "NT-ware (Canon Inc. Group)"
-      duration: "April 2019 - July 2019"
-      location: "Bad Iburg, Osnabrück, Germany"
+      company: "NT-ware"
+      duration: "Jul. 2018 - Aug. 2018"
+      location: "Bad Iburg, Germany"
       country: "/germany.png"
-      description: "Selected as 1 of the 10 top programmers winners of more than 150 participants in the Tech Camp 2.0 challenge"
+      description: "Creation of an internal style guide for the development of UniFLOW product for the Canon Inc company"
       logo: "/nt-ware.png"
       banner_logos: true
       url: "https://www.nt-ware.com"
@@ -134,13 +131,15 @@ experience:
 
     - title: "IT Intern"
       company: "University of Girona"
-      duration: "October 2016 - June 2017"
+      duration: "Oct. 2016 - Jun. 2017"
       location: "Girona, Spain"
       country: "/spain.png"
       description: "Intern in Technical Services at UdG's libraries. PCs and printers mantainer"
       logo: "/udg.png"
       banner_logos: false
       url: "https://www.udg.edu/en/"
+      skills:
+          - IT support
 
 # education
 education:
