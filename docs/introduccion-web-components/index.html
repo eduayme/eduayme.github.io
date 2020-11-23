@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+    
+    <title>Introducción a los Web Components · Eduard Aymerich</title>
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    
+    <link rel="stylesheet" href="https://eduayme.github.io/style.main.min.03e520ea389d2d18f267109ff8e068a62536639d7fe99d213d906763bd740c5e.css" />
+    <link rel='icon' href='/favicon-32x32.png' type='image/x-icon'/ >
+
+</head>
+<body class=" post-template ">
+
+    <div class="site-wrapper">
+
+<header class="site-header"><div class="outer site-nav-main">
+    <div class="inner"><nav class="site-nav">
+    <div class="site-nav-left">
+        <a href="/">
+            
+                <div class="site-nav-logo">Eduard Aymerich</div>
+            
+        </a>
+
+        <div class="site-nav-content">
+            <ul class="nav" role="menu" id="topNav">
+                
+                    <li class="nav-home" role="menuitem" id="about">
+                        <a href="/about">about</a>
+                    </li>
+                
+                    <li class="nav-home" role="menuitem" id="portfolio">
+                        <a href="/portfolio">portfolio</a>
+                    </li>
+                
+                    <li class="nav-home" role="menuitem" id="blog">
+                        <a href="/blog">blog</a>
+                    </li>
+                
+                    <li class="nav-home" role="menuitem" id="contact">
+                        <a href="/contact">contact</a>
+                    </li>
+                
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<style>
+@media screen and (max-width: 800px) {
+    .site-nav-logo {
+        font-size: 14px;
+    }
+    .nav li a {
+        font-size: 10px;
+        padding: 5px 15px;
+    }
+    .nav li a:last-child {
+        padding: 12px 15px;
+    }
+}
+</style>
+</div>
+</div></header>
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post ">
+
+            <header class="post-full-header">
+
+                <div class="byline-meta-content">
+                    
+                        <a class="margin-sides category post-card-primary-category" href="/categories/tech">Tech</a>
+                    
+                </div>
+
+                <h1 class="post-full-title">Introducción a los Web Components</h1>
+
+                
+                    <p class="post-full-custom-excerpt">Conceptos principales de los Web Components con ejemplos básicos</p>
+                
+
+                <div class="post-full-byline">
+                    <section class="post-full-byline-content">
+                        <section class="post-full-byline-meta">
+                            <div class="byline-meta-content">
+                                
+                                <time class="byline-meta-date" datetime="2020-1211-11">22 November 2020</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> 8 min read</span>
+                            </div>
+                        </section>
+                    </section>
+                </div>
+            </header>
+
+            
+            <figure class="post-full-image">
+                <img src="/blog/001-web-components/img/web-components.png" alt="Introducción a los Web Components" />
+            </figure>
+            
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <h2 id="qué-son">Qué son</h2>
+<p>Los Componentes Web son un paquete de diferentes tecnologías que te permiten crear elementos personalizados reutilizables (con funcionalidad encapsulada apartada del resto del código) y utilizarlos en las aplicaciones web.</p>
+<h2 id="para-qué-sirven">Para qué sirven</h2>
+<p>Principalmente apuntan a resolver los problemas de reutilización de código que existe en HTML (con sus estilos CSS y scripts Javascript asociados), pudiendo encapsular partes de código (elementos web) haciéndolos independientes unos de otros.</p>
+<h2 id="ejemplo-básico">Ejemplo básico</h2>
+<p>Vamos a crear un ejemplo básico de Web Component para un título que ponga Hello World. Los pasos a seguir son los siguientes:</p>
+<ol>
+<li>Crear el fichero del componentes con extensión &lsquo;.js&rsquo;</li>
+<li>Definir en ese fichero javascript la nueva clase extendiendo <code>HTMLElement</code> (interfaz que representa cualquier elemento HTML)</li>
+<li>Especificar el comportamiento del componente dentro de las 4 funciones predefinidas (lo veremos en profundidad en el apartado <em>Conceptos</em>). En este caso se utilizará <code>connectedCallback()</code>.</li>
+<li>Registrar el nuevo elemento personalizado que hemos creado fuera de la clase con <code>customElements.define()</code>. A esta función se le pasa el nombre del componente (siempre en kebab-case y con mínimo un guión &lsquo;-&rsquo; entre dos palabras) y el nombre de la clase.</li>
+<li>Si se quiere adjuntar un Shadow DOM (lo veremos en profundidad en el apartado <em>Conceptos</em>) al elemento se le añade con <code>Element.attachShadow()</code>.</li>
+<li>Importar y utilizar el elemento en el fichero HTML con la nueva etiqueta personalizada.</li>
+</ol>
+<h4 id="say-hellojs"><strong><code>say-hello.js</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SayHello</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">HTMLElement</span> {
+  <span style="color:#a6e22e">connectedCallback</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`&lt;h1&gt;Hello world&lt;/h1&gt;`</span>;
+  }
+}
+
+<span style="color:#a6e22e">customElements</span>.<span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;say-hello&#39;</span>, <span style="color:#a6e22e">SayHello</span>);
+</code></pre></div><h4 id="mainhtml"><strong><code>main.html</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">say-hello</span>&gt;&lt;/<span style="color:#f92672">say-hello</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;say-hello.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="conceptos">Conceptos</h2>
+<h4 id="custom-elements">Custom Elements</h4>
+<p>Conjunto de APIs de Javascript que permiten definir nuevos elementos personalizados y su comportamiento.</p>
+<p>Un registro de Custom Element está asociado a un objeto <code>Window</code>, en vez de a un objeto <code>Document</code>, ya que cada constructor de un Custom Element hereda de la interfaz <code>HTMLElement</code> y solo existe uno por objeto <code>Window</code>.</p>
+<p>La definición de un nuevo elemento es el proceso de añadir un Custom Element al registro de elementos personalizados <code>CustomElementRegistry</code>. Para conseguirlo se hace con el método <code>define(nombre, constructor,</code><em><code>opciones</code></em><code>)</code>.</p>
+<p><a href="https://html.spec.whatwg.org/multipage/custom-elements.html#custom-elements-api">Información de la interfaz CustomElementRegistry</a></p>
+<h4 id="shadow-dom">Shadow DOM</h4>
+<p>Conjunto de APIs de Javascript para encapsular un DOM &ldquo;oculto&rdquo; únicamente para un elemento (renderizado por separado del DOM principal). Utilizando esta característica se pueden mantener en privado todas las características del componente, con su estilo CSS y funcionalidad en el script asociado, sin miedo a colisiones en las otras partes del documento.</p>
+<p>Cuando se usa un componente con Shadow DOM asociado únicamente se le puede referenciar como elemento completo, nunca nada interno del componente. En este aspecto un Shadow DOM se comporta como un <code>iframe</code>, donde el contenido interno está fuera del alcance del resto del documento.</p>
+<p>Con esta definición clara podemos separamos entre dos conceptos: <code>Light DOM</code>, donde el contenido es accesible para todo el mundo, y <code>Shadow DOM</code>, donde el contenido es local del componente e inaccesible para el resto.</p>
+<p>Para asignar un <code>Shadow DOM</code> a un componente se hace a través del método <code>attachShadow(mode:</code><em><code> open|closed</code></em><code>)</code>.</p>
+<h4 id="say-hellojs-1"><strong><code>say-hello.js</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">shadowRoot</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;say-hello-red&#39;</span>).<span style="color:#a6e22e">attachShadow</span>({ <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;open&#39;</span> });
+<span style="color:#a6e22e">shadowRoot</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span>
+  <span style="color:#e6db74">`&lt;style&gt;
+</span><span style="color:#e6db74">  h1 {
+</span><span style="color:#e6db74">    color: red;
+</span><span style="color:#e6db74">  }
+</span><span style="color:#e6db74">  &lt;/style&gt;
+</span><span style="color:#e6db74">  &lt;h1&gt;Hello world&lt;/h1&gt;`</span>;
+</code></pre></div><h4 id="mainhtml-1"><strong><code>main.html</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;say-hello-red&#34;</span>&gt;&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;<span style="color:#f92672">h1</span>&gt;Hello World not affected&lt;/<span style="color:#f92672">h1</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;say-hello.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p><a href="https://developers.google.com/web/fundamentals/web-components/shadowdom">Más información del Shadow DOM</a></p>
+<p><a href="https://dom.spec.whatwg.org/#shadowroot">Información de la interfaz ShadowRoot</a></p>
+<h4 id="es-modules">ES Modules</h4>
+<p>Muchas veces en el código importamos ficheros javascript. El problema que existe es que si ya se han cargado previamente no necesitamos perder tiempo en volverlos a cargar. Esto lo resuelve ES Module, un modulo estándard de javascript oficial (ha llevado casi 10 años de estandarización).</p>
+<p>A la hora de cargar un archivo JS con la etiqueta <code>script</code>, a través de esta estándard, podemos añadirle el tag <code>type=&quot;module&quot;</code> para que importe ese fichero esté encapsulado en esa ventana y únicamente se ejecute una vez.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- ... --&gt;</span>
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;say-hello.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><p>Otra función muy importante que añade la estandarización de ES Modules es la de importación de variables. Esto nos permite utilizar las mismas variables entre diferentes fichero. Vamos a ver un ejemplo donde lo que se importa será el propio Web Component, en un caso para meterlo dentro de otro componente y en otro caso para crear uno nuevo extendiendo uno que ya tenemos.</p>
+<h4 id="say-hellojs-2"><strong><code>say-hello.js</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SayHello</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">HTMLElement</span> {
+  <span style="color:#a6e22e">connectedCallback</span>() {
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`&lt;h1&gt;Hello world&lt;/h1&gt;`</span>;
+  }
+}
+
+<span style="color:#a6e22e">customElements</span>.<span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;say-hello&#39;</span>, <span style="color:#a6e22e">SayHello</span>);
+</code></pre></div><p>Si queremos meterlo dentro de otro Web Component:</p>
+<h4 id="say-hello-sectionjs"><strong><code>say-hello-section.js</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#e6db74">&#39;./say-hello&#39;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SayHelloSection</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">HTMLElement</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#66d9ef">super</span>()
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">attachShadow</span>({ <span style="color:#a6e22e">mode</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;open&#39;</span> })
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">section</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;section&#39;</span>)
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">shadowRoot</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">section</span>)
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">myCoolDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;say-hello&#39;</span>)
+    <span style="color:#a6e22e">section</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">myCoolDiv</span>)
+  }
+}
+
+<span style="color:#a6e22e">customElements</span>.<span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;say-hello-section&#39;</span>, <span style="color:#a6e22e">SayHelloSection</span>);
+</code></pre></div><p>Si queremos extenderlo al crear un nuevo Web Component:</p>
+<h4 id="say-hello-coolerjs"><strong><code>say-hello-cooler.js</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">SayHello</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;./say-hello.js&#39;</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SayHelloCooler</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">SayHello</span> {
+  <span style="color:#a6e22e">constructor</span>() {
+    <span style="color:#66d9ef">super</span>()
+    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">coolerStyle</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#39;style&#39;</span>)
+    <span style="color:#a6e22e">coolerStyle</span>.<span style="color:#a6e22e">textContent</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`
+</span><span style="color:#e6db74">      h1 {
+</span><span style="color:#e6db74">        background-color: black;
+</span><span style="color:#e6db74">        color: white;
+</span><span style="color:#e6db74">      }
+</span><span style="color:#e6db74">    `</span>
+
+    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">shadowRoot</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">coolerStyle</span>)
+  }
+}
+
+<span style="color:#a6e22e">customElements</span>.<span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;say-hello-cooler&#39;</span>, <span style="color:#a6e22e">SayHelloCooler</span>);
+</code></pre></div><p><a href="https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/">Cómo funciona ES Modules</a></p>
+<h4 id="html-templates--slots">HTML templates &amp; slots</h4>
+<p>El tag HTML <code>template</code> permite acabar con código dentro del HTML normal que no será renderizado immediatamente pero puede ser utilizado más tarde.</p>
+<p>Este tag de plantilla lo podemos complementar con el tag HTML <code>slot</code>, dejando insertar tus propias especificaciones, creando árboles DOM por separado y presentándolos de forma conjunta.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span>&gt;
+  &lt;<span style="color:#f92672">slot</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;descripcion&#39;</span>&gt;&lt;/<span style="color:#f92672">slot</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+</code></pre></div><p>Vamos a ver un ejemplo con varios libros y modificar la vista dinámicamente para entender mejor la etiqueta:</p>
+<h4 id="books-infojs"><strong><code>books-info.js</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#39;use strict&#39;</span>;
+
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">books</span> <span style="color:#f92672">=</span> [
+  { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;The Great Gatsby&#39;</span>, <span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;F. Scott Fitzgerald&#39;</span> },
+  { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;A Farewell to Arms&#39;</span>, <span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Ernest Hemingway&#39;</span> },
+  { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Catch 22&#39;</span>, <span style="color:#a6e22e">author</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Joseph Heller&#39;</span> }
+];
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">appendBooks</span>(<span style="color:#a6e22e">templateId</span>) {
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">booksList</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;books&#39;</span>);
+  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">fragment</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#a6e22e">templateId</span>);
+
+  <span style="color:#75715e">// Clear out the content from the ul
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">booksList</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>;
+
+  <span style="color:#75715e">// Loop over the books and modify the given template
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">books</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#a6e22e">book</span> =&gt; {
+    <span style="color:#75715e">// Create an instance of the template content
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">instance</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">importNode</span>(<span style="color:#a6e22e">fragment</span>.<span style="color:#a6e22e">content</span>, <span style="color:#66d9ef">true</span>);
+    <span style="color:#75715e">// Add relevant content to the template
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.title&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">title</span>;
+    <span style="color:#a6e22e">instance</span>.<span style="color:#a6e22e">querySelector</span>(<span style="color:#e6db74">&#39;.author&#39;</span>).<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">book</span>.<span style="color:#a6e22e">author</span>;
+    <span style="color:#75715e">// Append the instance ot the DOM
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">booksList</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">instance</span>);
+  });  
+}
+
+document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#39;templates&#39;</span>).<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;change&#39;</span>, (<span style="color:#a6e22e">event</span>) =&gt; <span style="color:#a6e22e">appendBooks</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">value</span>));
+
+<span style="color:#a6e22e">appendBooks</span>(<span style="color:#e6db74">&#39;book-template&#39;</span>);
+</code></pre></div><h4 id="mainhtml-2"><strong><code>main.html</code></strong></h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;book-template&#34;</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt; &amp;mdash; &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">template</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;book-template-2&#34;</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;&lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;author&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;&#39;s classic novel &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;title&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">template</span>&gt;
+
+&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;books&#34;</span>&gt;&lt;/<span style="color:#f92672">ul</span>&gt;
+
+&lt;<span style="color:#f92672">fieldset</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;templates&#34;</span>&gt;
+  &lt;<span style="color:#f92672">legend</span>&gt;Choose template&lt;/<span style="color:#f92672">legend</span>&gt;
+
+  &lt;<span style="color:#f92672">label</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;template&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;book-template&#34;</span> <span style="color:#a6e22e">checked</span>&gt; Template One
+  &lt;/<span style="color:#f92672">label</span>&gt;
+  &lt;<span style="color:#f92672">label</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;template&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;book-template-2&#34;</span>&gt; Template Two
+  &lt;/<span style="color:#f92672">label</span>&gt;
+&lt;/<span style="color:#f92672">fieldset</span>&gt;
+
+&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;books-info.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div><h2 id="compatibilidad">Compatibilidad</h2>
+<h4 id="navegadores-web">Navegadores web</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">Firefox</th>
+<th align="center">Chrome</th>
+<th align="center">Safari</th>
+<th align="center">Opera</th>
+<th align="center">Edge</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Elements</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">v76 o +</td>
+</tr>
+<tr>
+<td>Shadow DOM</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">v75 o +</td>
+</tr>
+<tr>
+<td>ES Modules</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+</tr>
+<tr>
+<td>HTML templates</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+<td align="center">Sí</td>
+</tr>
+</tbody>
+</table>
+<h4 id="soporte-a-usuarios-según-sus-navegadores-web">Soporte a usuarios según sus navegadores web</h4>
+<table>
+<thead>
+<tr>
+<th></th>
+<th align="center">Supported</th>
+<th align="center">Partial supported</th>
+<th align="center">Not supported</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Custom Elements</td>
+<td align="center">77.87%</td>
+<td align="center">16.59%</td>
+<td align="center">5.53%</td>
+</tr>
+<tr>
+<td>Shadow DOM</td>
+<td align="center">82.63%</td>
+<td align="center">11.93%</td>
+<td align="center">5.43%</td>
+</tr>
+<tr>
+<td>ES Modules</td>
+<td align="center">95.02%</td>
+<td align="center">2.95%</td>
+<td align="center">2.02%</td>
+</tr>
+<tr>
+<td>HTML templates</td>
+<td align="center">96.57%</td>
+<td align="center">0.17%</td>
+<td align="center">3.27%</td>
+</tr>
+</tbody>
+</table>
+<p><em>Datos de noviembre 2020 en la web <a href="https://caniuse.com/?search=components">Can I use</a></em></p>
+<h3 id="polyfills">Polyfills</h3>
+<p>Los Web Components son unos estándares relativamente nuevos para los navegadores web. Para versiones más antiguas existen los Polyfills, que simulan las capabilities faltantes de la forma más realista posible.</p>
+<p><a href="https://www.webcomponents.org/polyfills/">Información de Polyfills</a></p>
+<h2 id="responsive">Responsive</h2>
+<p>En el diseño de interfaces gráficas tenemos que asegurar que el diseño se verá bien en cualquier tipo de pantalla y dispositivo. Para los Web Components el problema reside en no poder controlar el estilo basándonos en el elemento padre que lo contiene. Actualmente solo se puede consultar el tamaño del viewport del usuario aunque las propuestas para solucionar esto se empezaron a presentar en 2013 con <code>Media Quieries</code> o <code>Element Queries</code> y más tarde en 2015 con un borrador de propuesta de <code>Container Queries</code>.</p>
+<p><a href="https://ianstormtaylor.com/media-queries-are-a-hack/">Inicio propuesta Media Queries</a></p>
+<p><a href="https://wicg.github.io/container-queries/">Borrador Container Queries</a></p>
+<p>Por el momento no existe ningún estándard en los navegadores web con estas posibles soluciones por lo que toca implementar a mano alguna idea para aproximarse a resolverlo.</p>
+<p>Tras un tiempo de investigación la mejor solución que se ha podido encontrar por el momento es la de Philip Walton, actual ingeniero de Google, dónde se implementan clases genéricas CSS para los breakpoints y luego se añaden a cada contenedor de forma dinámica para que sus Web Components internos los puedan detectar. Para hacer esto se utiliza la interfaz <code>ResizeObserver</code>, actualmente compatible con todos los navegadores excepto IE y para Firefox en Android. La implementación sería a partir de los siguientes pasos:</p>
+<ol>
+<li>Definir breakpoints para responsive</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Breakpoint name</th>
+<th align="center">Container width</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SM</td>
+<td align="center"><code>min-width: 24rem</code></td>
+</tr>
+<tr>
+<td>MD</td>
+<td align="center"><code>min-width: 36rem</code></td>
+</tr>
+<tr>
+<td>LG</td>
+<td align="center"><code>min-width: 48rem</code></td>
+</tr>
+<tr>
+<td>XL</td>
+<td align="center"><code>min-width: 60rem</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>Definir breakpoints en el Web Component</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">MyComponent</span> {
+  <span style="color:#75715e">/* Estilo base para cualquier tamaño de pantalla */</span>
+}
+
+.<span style="color:#a6e22e">MD</span> <span style="color:#f92672">&gt;</span> .<span style="color:#a6e22e">MyComponent</span> {
+  <span style="color:#75715e">/* Sobrescribir estilo para tamaño mediano de pantalla */</span>
+}
+
+.<span style="color:#a6e22e">LG</span> <span style="color:#f92672">&gt;</span> .<span style="color:#a6e22e">MyComponent</span> {
+  <span style="color:#75715e">/* Sobrescribir estilo para tamaño grande de pantalla */</span>
+}
+</code></pre></div><ol start="3">
+<li>Aplicar <code>ResizeObserver</code> de forma dinámica</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/* Si ResizeObserver es soportado */</span>
+<span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#39;ResizeObserver&#39;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">self</span>) {
+  <span style="color:#75715e">/* Crear instancia ResizeObserver para el contenedor de elementos */</span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ro</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ResizeObserver</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">entries</span>) {
+    <span style="color:#75715e">/* Crear breakpoints por defecto */</span>
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">defaultBreakpoints</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">SM</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">384</span>, <span style="color:#a6e22e">MD</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">576</span>, <span style="color:#a6e22e">LG</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">768</span>, <span style="color:#a6e22e">XL</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">960</span>};
+
+    <span style="color:#a6e22e">entries</span>.<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">entry</span>) {
+      <span style="color:#75715e">/* Si breakpoints están definidos en el elemento observado usar. */</span>
+      <span style="color:#75715e">/* Sino los por defecto */</span>
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">breakpoints</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">breakpoints</span> <span style="color:#f92672">?</span>
+          <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">breakpoints</span>) <span style="color:#f92672">:</span>
+          <span style="color:#a6e22e">defaultBreakpoints</span>;
+
+      <span style="color:#75715e">/* Actualizar los breakpoints del elemento observado */</span>
+      Object.<span style="color:#a6e22e">keys</span>(<span style="color:#a6e22e">breakpoints</span>).<span style="color:#a6e22e">forEach</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">breakpoint</span>) {
+        <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">minWidth</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">breakpoints</span>[<span style="color:#a6e22e">breakpoint</span>];
+        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">contentRect</span>.<span style="color:#a6e22e">width</span> <span style="color:#f92672">&gt;=</span> <span style="color:#a6e22e">minWidth</span>) {
+          <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">add</span>(<span style="color:#a6e22e">breakpoint</span>);
+        } <span style="color:#66d9ef">else</span> {
+          <span style="color:#a6e22e">entry</span>.<span style="color:#a6e22e">target</span>.<span style="color:#a6e22e">classList</span>.<span style="color:#a6e22e">remove</span>(<span style="color:#a6e22e">breakpoint</span>);
+        }
+      });
+    });
+  });
+
+  <span style="color:#75715e">/* Buscar todos los elementos con atributo `data-observe-resizes` */</span>
+  <span style="color:#75715e">/* Si lo tienen entonces observarlos */</span>
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">elements</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#39;[data-observe-resizes]&#39;</span>);
+  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">element</span>, <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; <span style="color:#a6e22e">element</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">elements</span>[<span style="color:#a6e22e">i</span>]; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>) {
+    <span style="color:#a6e22e">ro</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#a6e22e">element</span>);
+  }
+}
+</code></pre></div><p>Con estos 3 pasos ya tendríamos una personalización para que los Web Components puedan detectar el tamaño del elemento padre. La transformación que se haría sería este:</p>
+<p><em>Elemento de 600px original</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">data-observe-resizes</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MyComponent&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p><em>Se convertiría en esto</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SM MD&#34;</span> <span style="color:#a6e22e">data-observe-resizes</span>&gt;
+  &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MyComponent&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Este código de ejemplo solo funciona para elementos contenedor que ya están en el DOM. Para solucionar esto añadiremos un único ResizeObserver que observe a todos los componente de contenedor genérico que se creen. Por ejemplo, si el elemento genérico lo llamasemos <code>&lt;responsive-container&gt;</code> el código quedaría de esta manera:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/* Crear un único observador para todos los elementos &lt;responsive-container&gt; */</span>
+<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ro</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ResizeObserver</span>(...);
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ResponsiveContainer</span> <span style="color:#66d9ef">extends</span> <span style="color:#a6e22e">HTMLElement</span> {
+  <span style="color:#75715e">/* ... */</span>
+  <span style="color:#a6e22e">connectedCallback</span>() {
+    <span style="color:#a6e22e">ro</span>.<span style="color:#a6e22e">observe</span>(<span style="color:#66d9ef">this</span>);
+  }
+}
+
+<span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">customElements</span>.<span style="color:#a6e22e">define</span>(<span style="color:#e6db74">&#39;responsive-container&#39;</span>, <span style="color:#a6e22e">ResponsiveContainer</span>);
+</code></pre></div><p><a href="https://philipwalton.com/articles/responsive-components-a-solution-to-the-container-queries-problem/">Artículo Responsive Components</a></p>
+<p><a href="https://philipwalton.github.io/responsive-components/">Responsive Components demo</a></p>
+<p><a href="https://www.w3.org/TR/resize-observer/">Información interfaz ResizeObserver</a></p>
+
+                </div>
+            </section>
+
+            
+            <div class="post-full-byline">
+                <section class="post-full-byline-content">
+                    <section class="post-full-byline-meta">
+                        <div class="byline-meta-content center">
+                            
+                                <a class="tags margin-sides byline-reading-time" href="/tags/web-components">Web Components</a>
+                            
+                                <a class="tags margin-sides byline-reading-time" href="/tags/html">HTML</a>
+                            
+                                <a class="tags margin-sides byline-reading-time" href="/tags/javascript">Javascript</a>
+                            
+                        </div>
+                    </section>
+                </section>
+            </div>
+            
+
+        </article>
+
+    </div>
+</main>
+    <aside class="read-next outer">
+        <div class="inner">
+            <div class="read-next-feed">
+    <article class="read-next-card">
+        <header class="read-next-card-header">
+            Related posts
+        </header>
+        <div class="read-next-card-content">
+            
+            
+        </div>
+    </article>
+
+
+
+                
+            </div>
+        </div>
+    </aside>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://eduayme.github.io/">Eduard Aymerich</a> &copy; 2020</section>
+                <nav class="site-footer-nav">
+                    
+                        <a href="https://linkedin.com/in/eduayme" target="_blank" rel="noopener">
+                            Linkedin
+                        </a>
+                    
+                    
+                    
+                        <a href="https://github.com/eduayme" target="_blank" rel="noopener">
+                            Github
+                        </a>
+                    
+                    
+                    
+                    
+                    <a style="opacity: 0.5;">
+                        Website by Eduard Aymerich
+                    </a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+</body>
+</html>

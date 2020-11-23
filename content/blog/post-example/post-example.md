@@ -3,8 +3,9 @@ title: "My Example Post"
 summary: "This is the post summary"
 date: 2020-08-04
 url: example-post
-feature_image: "/blog/1-post/img/cute_cat.jpg"
+feature_image: "/blog/post-example/img/cute_cat.jpg"
 author:
+draft: true
 categories:
     - Tech
 tags:
