@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     
-    <link rel="stylesheet" href="https://eduayme.github.io/style.main.min.7586849ab06e107dc3bb7d54366e098e19ef1d5da93c2b1bc4d789cfb08ff9f3.css" />
+    <link rel="stylesheet" href="https://eduayme.github.io/style.main.min.6a47782f9edce0e1ddce946220df21905ac734b1fece59484fc29c1acc5694c3.css" />
     <link rel='icon' href='/favicon-32x32.png' type='image/x-icon'/ >
 
 </head>
@@ -69,7 +69,31 @@
 }
 </style>
 </div>
-</div></header>
+</div>
+
+<style media="screen">
+    .site-nav-main {
+        background-color: transparent;
+    }
+    .site-nav-main.scrolled {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+</style>
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous">
+</script>
+<script type="text/javascript">
+    $(function () {
+        $(document).scroll(function () {
+            var $nav = $(".site-nav-main");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+</script>
+</header>
 
 <main id="site-main" class="site-main outer">
     <div class="inner">
@@ -366,10 +390,10 @@ document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e
 <p>Los Web Components son unos estándares relativamente nuevos para los navegadores web. Para versiones más antiguas existen los Polyfills, que simulan las capabilities faltantes de la forma más realista posible.</p>
 <p><a href="https://www.webcomponents.org/polyfills/">Información de Polyfills</a></p>
 <h2 id="responsive">Responsive</h2>
-<p>En el diseño de interfaces gráficas tenemos que asegurar que el diseño se verá bien en cualquier tipo de pantalla y dispositivo. Para los Web Components el problema reside en no poder controlar el estilo basándonos en el elemento padre que lo contiene. Actualmente solo se puede consultar el tamaño del viewport del usuario aunque las propuestas para solucionar esto se empezaron a presentar en 2013 con <code>Media Quieries</code> o <code>Element Queries</code> y más tarde en 2015 con un borrador de propuesta de <code>Container Queries</code>.</p>
+<p>En el diseño de interfaces gráficas tenemos que asegurar que el diseño se verá bien en cualquier tipo de pantalla y dispositivo. Para los Web Components el problema reside en no poder controlar el estilo basándonos en el elemento padre que lo contiene. Actualmente solo se puede consultar el tamaño del viewport del usuario aunque las propuestas para solucionar esto se empezaron a presentar en 2013 con <code>Media Queries</code> o <code>Element Queries</code> y más tarde en 2015 con un borrador de propuesta de <code>Container Queries</code>.</p>
 <p><a href="https://ianstormtaylor.com/media-queries-are-a-hack/">Inicio propuesta Media Queries</a></p>
 <p><a href="https://wicg.github.io/container-queries/">Borrador Container Queries</a></p>
-<p>Por el momento no existe ningún estándard en los navegadores web con estas posibles soluciones por lo que toca implementar a mano alguna idea para aproximarse a resolverlo.</p>
+<p>Por el momento no existe ningún estándar en los navegadores web con estas posibles soluciones por lo que toca implementar a mano alguna idea para aproximarse a resolverlo.</p>
 <p>Tras un tiempo de investigación la mejor solución que se ha podido encontrar por el momento es la de Philip Walton, actual ingeniero de Google, dónde se implementan clases genéricas CSS para los breakpoints y luego se añaden a cada contenedor de forma dinámica para que sus Web Components internos los puedan detectar. Para hacer esto se utiliza la interfaz <code>ResizeObserver</code>, actualmente compatible con todos los navegadores excepto IE y para Firefox en Android. La implementación sería a partir de los siguientes pasos:</p>
 <ol>
 <li>Definir breakpoints para responsive</li>
@@ -459,7 +483,7 @@ document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SM MD&#34;</span> <span style="color:#a6e22e">data-observe-resizes</span>&gt;
   &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;MyComponent&#34;</span>&gt;...&lt;/<span style="color:#f92672">div</span>&gt;
 &lt;/<span style="color:#f92672">div</span>&gt;
-</code></pre></div><p>Este código de ejemplo solo funciona para elementos contenedor que ya están en el DOM. Para solucionar esto añadiremos un único ResizeObserver que observe a todos los componente de contenedor genérico que se creen. Por ejemplo, si el elemento genérico lo llamasemos <code>&lt;responsive-container&gt;</code> el código quedaría de esta manera:</p>
+</code></pre></div><p>Este código de ejemplo solo funciona para elementos contenedor que ya están en el DOM. Para solucionar esto añadiremos un único ResizeObserver que observe a todos los componente de contenedor genérico que se creen. Por ejemplo, si el elemento genérico lo llamásemos <code>&lt;responsive-container&gt;</code> el código quedaría de esta manera:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">/* Crear un único observador para todos los elementos &lt;responsive-container&gt; */</span>
 <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ro</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">ResizeObserver</span>(...);
 

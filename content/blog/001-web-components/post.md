@@ -281,13 +281,13 @@ Los Web Components son unos estándares relativamente nuevos para los navegadore
 
 ## Responsive
 
-En el diseño de interfaces gráficas tenemos que asegurar que el diseño se verá bien en cualquier tipo de pantalla y dispositivo. Para los Web Components el problema reside en no poder controlar el estilo basándonos en el elemento padre que lo contiene. Actualmente solo se puede consultar el tamaño del viewport del usuario aunque las propuestas para solucionar esto se empezaron a presentar en 2013 con `Media Quieries` o `Element Queries` y más tarde en 2015 con un borrador de propuesta de `Container Queries`.
+En el diseño de interfaces gráficas tenemos que asegurar que el diseño se verá bien en cualquier tipo de pantalla y dispositivo. Para los Web Components el problema reside en no poder controlar el estilo basándonos en el elemento padre que lo contiene. Actualmente solo se puede consultar el tamaño del viewport del usuario aunque las propuestas para solucionar esto se empezaron a presentar en 2013 con `Media Queries` o `Element Queries` y más tarde en 2015 con un borrador de propuesta de `Container Queries`.
 
 [Inicio propuesta Media Queries](https://ianstormtaylor.com/media-queries-are-a-hack/)
 
 [Borrador Container Queries](https://wicg.github.io/container-queries/)
 
-Por el momento no existe ningún estándard en los navegadores web con estas posibles soluciones por lo que toca implementar a mano alguna idea para aproximarse a resolverlo.
+Por el momento no existe ningún estándar en los navegadores web con estas posibles soluciones por lo que toca implementar a mano alguna idea para aproximarse a resolverlo.
 
 Tras un tiempo de investigación la mejor solución que se ha podido encontrar por el momento es la de Philip Walton, actual ingeniero de Google, dónde se implementan clases genéricas CSS para los breakpoints y luego se añaden a cada contenedor de forma dinámica para que sus Web Components internos los puedan detectar. Para hacer esto se utiliza la interfaz `ResizeObserver`, actualmente compatible con todos los navegadores excepto IE y para Firefox en Android. La implementación sería a partir de los siguientes pasos:
 
@@ -372,7 +372,7 @@ Con estos 3 pasos ya tendríamos una personalización para que los Web Component
 </div>
 ```
 
-Este código de ejemplo solo funciona para elementos contenedor que ya están en el DOM. Para solucionar esto añadiremos un único ResizeObserver que observe a todos los componente de contenedor genérico que se creen. Por ejemplo, si el elemento genérico lo llamasemos `<responsive-container>` el código quedaría de esta manera:
+Este código de ejemplo solo funciona para elementos contenedor que ya están en el DOM. Para solucionar esto añadiremos un único ResizeObserver que observe a todos los componente de contenedor genérico que se creen. Por ejemplo, si el elemento genérico lo llamásemos `<responsive-container>` el código quedaría de esta manera:
 
 ```javascript
 /* Crear un único observador para todos los elementos <responsive-container> */
