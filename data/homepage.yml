@@ -40,7 +40,7 @@ experience:
           - HTML
           - CSS
           - Javascript
-          - JQuery
+          - ES6
           - VueJS
           - NuxtJS
           - Highcharts
@@ -143,13 +143,26 @@ education:
   enable: true
   title: "Education"
   items:
-    - university: "University of Waterloo"
-      year: "2012-2017"
-      degree: "Bachelor of Applied Science (BASc), Electrical Engineering"
+    - university: "Technical University of Madrid"
+      year: "2020 - 2022"
+      location: "Madrid, Spain"
+      degree: "Master's Degree in International Leadership"
+      description: "Top Performance program with 15 of the best students from the Technical University of Madrid, developed in the Rafael del Pino Foundation and in excellence campuses in China (Beijing Institute of Technology and Tongji University) and in United States (MIT and Harvard)."
 
-    - university: "Sir John A Macdonald CI"
-      year: "2009-2012"
-      degree: "High School Diploma, Sciences, Math, Computer & Business Studies"
+    - university: "Technical University of Madrid"
+      year: "2019 - 2021"
+      location: "Madrid, Spain"
+      degree: "Master's Degree in Computer Engineering"
+
+    - university: "Constanza Business & Protocol School"
+      year: "2019 - 2021"
+      location: "Online"
+      degree: "Expertise in Directive Skills"
+
+    - university: "University of Girona"
+      year: "2015 - 2019"
+      location: "Girona, Spain"
+      degree: "Bachelor's Degree in Computer Science, Software Engineering"
 
 # softskills
 softskills:
