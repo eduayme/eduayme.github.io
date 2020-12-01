@@ -1,7 +1,7 @@
 # banner
 banner:
   enable: true
-  title: "Hi, I’m Edu!"
+  title: "Hi, I’m"
   subtitle: "Front-End Developer"
   description: "
     Currently at <a target='_blank' href='https://etsfactory.com/'>ETS Factory</a> developing software in investment strategies for international institutions.

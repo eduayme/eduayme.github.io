@@ -2,6 +2,9 @@ $color-primary: #e69c29;
 $color-secondary: #f1c784;
 $color-link: #54baf1;
 
+html {
+  scroll-behavior: smooth;
+}
 .post-content > div {
     width: 100%;
 }

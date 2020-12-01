@@ -2,7 +2,9 @@
     <div class="inner posts" id="banner">
         <div class="container-align margin-bottom" id="banner-info">
             <div class="title"> {{ .Site.Data.homepage.banner.title }} </div>
+            <div class="name"> {{ $.Site.Title }} </div>
             <div class="subtitle"> {{ .Site.Data.homepage.banner.subtitle }} </div>
+            <div class="social-icons">
             {{ if .Site.Params.linkedin }}
                 <a class="social-icon" href="{{ .Site.Params.linkedin }}" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -17,6 +19,17 @@
                     </svg>
                 </a>
             {{ end }}
+            </div>
+            <div class="main-actions">
+                {{ if .Site.Params.cv }}
+                    <a class="button-action primary" href="{{ .Site.Params.cv }}" target="_blank">
+                        Download CV
+                    </a>
+                {{ end }}
+                <a class="button-action secondary" href="/about">
+                    Read About Me
+                </a>
+            </div>
         </div>
         <div class="container-align margin-bottom" id="banner-experience">
             <div class="container padding-sides">
@@ -44,15 +57,20 @@
         overflow: hidden;
     }
     .title {
+        color: #e6e6e6;
+        font-size: 25px;
+        margin-top: 75px;
+        margin-bottom: 30px;
+    }
+    .name {
         color: #e69c29;
-        font-size: 70px;
-        margin-top: 150px;
+        font-size: 50px;
         font-weight: bold;
     }
     .subtitle {
         color: #f1c784;
-        font-size: 30px;
-        margin-top: 50px;
+        font-size: 25px;
+        margin-top: 30px;
         margin-bottom: 30px;
     }
     .social-icon {
@@ -106,7 +124,7 @@
         border-radius: 5px;
     }
     .column-logo-5:hover {
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 8px 0 black;
         background-color: white;
         filter: none;
     }
@@ -132,5 +150,39 @@
     img {
         vertical-align: middle;
         height: 60px;
+    }
+    .main-actions {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .button-action {
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        width: 150px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 15px;
+        margin: 10px;
+        border-radius: 5px;
+    }
+    .button-action:hover {
+        text-decoration: none;
+    }
+    .primary {
+        background-color: #E50914;
+        border-color: #E50914;
+        box-shadow: 0 4px 8px 0 black;
+    }
+    .primary:hover {
+        box-shadow: 0 4px 8px 0 #E50914;
+    }
+    .secondary {
+        background-color: #191b1f;
+        box-shadow: 0 4px 8px 0 black;
+    }
+    .secondary:hover {
+        background-color: black;
     }
 </style>

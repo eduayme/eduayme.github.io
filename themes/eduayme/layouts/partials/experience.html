@@ -4,6 +4,7 @@
             {{ .Site.Data.homepage.experience.title }}
         </div>
     </div>
+    <div class="experience-content">
     {{ if .Site.Data.homepage.experience.items }}
         {{ range .Site.Data.homepage.experience.items }}
             <div class="experience">
@@ -12,7 +13,17 @@
                         {{ .title }}
                     </div>
                     <div class="right-small">
-                        {{ .company }} | {{ .duration }} | {{ .location }}
+                        <div class="small-info">
+                            {{ .company }}
+                        </div>
+                        <div class="small-info separator"> | </div>
+                        <div class="small-info duration">
+                            {{ .duration }}
+                        </div>
+                        <div class="small-info separator"> | </div>
+                        <div class="small-info loc-exp">
+                            {{ .location }}
+                        </div>
                     </div>
                 </div>
                 <div class="description">
@@ -26,15 +37,25 @@
             </div>
         {{ end }}
     {{ end }}
-    <div class="margin-bottom"></div>
+    </div>
 {{ end }}
 
 <style media="screen">
+    .experience-content {
+        margin-bottom: 150px;
+    }
     .no-bottom {
         margin-bottom: 25px;
     }
     .right-small {
         float: right;
+    }
+    .small-info {
+        display: inline-block;
+        font-size: 15px;
+    }
+    .separator {
+        margin: 0 10px;
     }
     .skill {
         display: inline-block;
@@ -44,5 +65,11 @@
         background-color: purple;
         color: white;
         font-size: 12px;
+    }
+    .duration {
+        width: 170px;
+    }
+    .loc-exp {
+        width: 150px;
     }
 </style>

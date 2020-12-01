@@ -1,8 +1,62 @@
-<div class="container-align">
-    <div class="left-small">
-        Education
+{{ if .Site.Data.homepage.education.enable }}
+    <div class="container-align">
+        <div class="left">
+            {{ .Site.Data.homepage.education.title }}
+        </div>
     </div>
-</div>
-<div class="container">
-    udg
-</div>
+    <div class="education-content">
+    {{ if .Site.Data.homepage.education.items }}
+        {{ range .Site.Data.homepage.education.items }}
+            <div class="experience">
+                <div class="container-align no-bottom">
+                    <div class="left-small">
+                        {{ .degree }}
+                    </div>
+                    <div class="right-small">
+                        <div class="small-info">
+                            {{ .university }}
+                        </div>
+                        <div class="small-info separator"> | </div>
+                        <div class="small-info year">
+                            {{ .year }}
+                        </div>
+                        <div class="small-info separator"> | </div>
+                        <div class="small-info loc-edu">
+                            {{ .location }}
+                        </div>
+                    </div>
+                </div>
+                <div class="description">
+                    {{ .description }}
+                </div>
+            </div>
+        {{ end }}
+    {{ end }}
+    </div>
+{{ end }}
+
+<style media="screen">
+    .education-content {
+        margin-bottom: 150px;
+    }
+    .no-bottom {
+        margin-top: 50px !important;
+        margin-bottom: 25px;
+    }
+    .right-small {
+        float: right;
+    }
+    .small-info {
+        display: inline-block;
+        font-size: 15px;
+    }
+    .separator {
+        margin: 0 10px;
+    }
+    .year {
+        width: 100px;
+    }
+    .loc-edu {
+        width: 100px;
+    }
+</style>
