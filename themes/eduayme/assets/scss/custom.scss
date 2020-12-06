@@ -38,11 +38,20 @@ html {
 }
 .left {
     float: left;
-    font-size: 2.5rem;
+    font-size: 4rem;
+    color: white;
 }
 .left-small {
     float: left;
     font-size: 2rem;
+    font-weight: bold;
+    color: white;
+}
+.right-small {
+    float: right;
+    color: white;
+}
+.top-info {
     margin-bottom: 30px;
 }
 .center {
@@ -110,7 +119,26 @@ html {
     .cards-container {
         margin: 0 -.1% 10px -.1%;
     }
+    .top-info {
+        margin-bottom: 50px !important;
+    }
+    .right-small {
+        float: left !important;
+        font-size: 1rem;
+    }
+    .duration,
+    .year,
+    .loc-exp,
+    .loc-edu {
+        width: auto !important;
+        margin-top: 10px;
+    }
+    .right-info {
+        margin-top: 10px;
+        float: left !important;
+    }
 }
+
 .card {
     padding: 15px 5px 5px 5px;
     transition: 0.3s;

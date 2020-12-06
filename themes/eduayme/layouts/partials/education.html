@@ -8,7 +8,7 @@
     {{ if .Site.Data.homepage.education.items }}
         {{ range .Site.Data.homepage.education.items }}
             <div class="experience">
-                <div class="container-align no-bottom">
+                <div class="container-align no-bottom top-info">
                     <div class="left-small">
                         {{ .degree }}
                     </div>
@@ -42,9 +42,6 @@
     .no-bottom {
         margin-top: 50px !important;
         margin-bottom: 25px;
-    }
-    .right-small {
-        float: right;
     }
     .small-info {
         display: inline-block;

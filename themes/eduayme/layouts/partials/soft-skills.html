@@ -1,9 +1,9 @@
 {{ if .Site.Data.homepage.softskills.enable }}
-    <div class="container-align">
-        <div class="left-small">
+    <div class="container-align top-info">
+        <div class="left">
             {{ .Site.Data.homepage.softskills.title }}
         </div>
-        <div class="right">
+        <div class="right-info">
             {{ .Site.Data.homepage.softskills.endorsed }}
         </div>
     </div>
@@ -27,7 +27,7 @@
 {{ end }}
 
 <style media="screen">
-    .right {
+    .right-info {
         color: #74ff8d;
         font-size: 12px;
     }

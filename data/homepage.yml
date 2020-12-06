@@ -29,7 +29,7 @@ experience:
   items:
     - title: "Front-End Developer"
       company: "ETS Factory"
-      duration: "Jul. 2020 - Current"
+      duration: "Jul. 2020 - Currently"
       location: "Madrid, Spain"
       country: "/spain.png"
       description: "Software development related to recommending and managing investment funds"
@@ -367,7 +367,7 @@ awards:
         image: "/mundodeportivo.png"
 
       - name: "Excellence in Girona sports"
-        organisation: "L'Esportiu de Catalunya"
+        organisation: "L'Esportiu"
         date: "October 2017"
         image: "/esportiu_cat.jpg"
 

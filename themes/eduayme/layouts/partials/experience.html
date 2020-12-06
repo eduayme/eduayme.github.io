@@ -8,7 +8,7 @@
     {{ if .Site.Data.homepage.experience.items }}
         {{ range .Site.Data.homepage.experience.items }}
             <div class="experience">
-                <div class="container-align no-bottom">
+                <div class="container-align no-bottom top-info">
                     <div class="left-small">
                         {{ .title }}
                     </div>
@@ -46,9 +46,6 @@
     }
     .no-bottom {
         margin-bottom: 25px;
-    }
-    .right-small {
-        float: right;
     }
     .small-info {
         display: inline-block;
