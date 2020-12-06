@@ -91,7 +91,7 @@ experience:
       duration: "Sep. 2018 - Sep. 2018"
       location: "Düsseldorf, Germany"
       country: "/germany.png"
-      description: "Selected as 1 of the 10 top programmers winners of more than 150 participants in the Tech Camp 2.0 challenge"
+      description: "Selected as 1 of the 10 top programmers winners of more than 150 participants in the Tech Camp 2.0 challenge. <br><a href='https://tech.trivago.com/2018/09/27/nine-nations-united-in-code/' target='_blank'>Link to the Trivago post about Tech Camp 2.0</a>"
       logo: "/trivago.png"
       banner_logos: true
       url: "https://www.trivago.com"
@@ -152,17 +152,20 @@ education:
     - university: "Technical University of Madrid"
       year: "2019 - 2021"
       location: "Madrid, Spain"
-      degree: "Master's Degree in Computer Engineering"
+      degree: "Master's Degree in Computer Engineering, IT management"
+      description: "IT management specialization. The goal of this Master Degree is to train students to be the leaders in the processes of innovation and digital trasformation that are going on nowadays in our society."
 
     - university: "Constanza Business & Protocol School"
       year: "2019 - 2021"
       location: "Online"
       degree: "Expertise in Directive Skills"
+      description: "300-hour online course aimed at acquiring the most demanded skills for managers: time management, personal productivity, team motivation, leadership skills and the ability to speak well in public."
 
     - university: "University of Girona"
       year: "2015 - 2019"
       location: "Girona, Spain"
       degree: "Bachelor's Degree in Computer Science, Software Engineering"
+      description: "Software Engineering specialization. The bachelor's degree in Computer Engineering at the University of Girona has received a qualification of excellence from the Catalan Universities Agency. Only 10 % of the courses in Catalonia have received this award."
 
 # softskills
 softskills:

@@ -27,7 +27,7 @@
                     </div>
                 </div>
                 <div class="description">
-                    {{ .description }}
+                    {{ .description | safeHTML }}
                 </div>
                 {{ range .skills }}
                     <div class="skill {{ . }}">
