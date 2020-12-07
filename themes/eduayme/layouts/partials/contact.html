@@ -1,10 +1,32 @@
 <div class="inner posts" id="contact">
-    <div class="container-align">
+    <div class="container-contact">
         <div class="left">
             Contact
         </div>
     </div>
     <div class="no-padding">
-        contact
+        <form
+          action="https://formspree.io/f/xvoawnzw"
+          method="POST"
+        >
+          <label>
+            Name
+            <input type="text" name="name">
+          </label>
+          <label>
+            Email
+            <input type="text" name="_replyto">
+          </label>
+          <label>
+            Subject
+            <input type="text" name="_subject">
+          </label>
+          <label>
+            Message
+            <textarea name="message"></textarea>
+          </label>
+
+          <button type="submit" class="submit-btn"> Send message </button>
+        </form>
     </div>
 </div>
