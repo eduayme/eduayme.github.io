@@ -3,17 +3,12 @@ banner:
   enable: true
   title: "Hi, I’m"
   subtitle: "Front-End Developer"
-  description: "
-    Currently at <a target='_blank' href='https://etsfactory.com/'>ETS Factory</a> developing software in investment strategies for international institutions.
-    <br>
-    Chess player with +2.200 FIDE ELO (top 2% in the world).
-  "
-  image: "/me.png"
 
 # about
 about:
   enable: true
   title: "Who am I?"
+  image: "/me.jpeg"
   content: '
     I am a 23 years old Software Engineer from Girona, Spain.
     <br>
