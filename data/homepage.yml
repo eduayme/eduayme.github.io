@@ -6,7 +6,7 @@ banner:
   description: "
     Currently at <a target='_blank' href='https://etsfactory.com/'>ETS Factory</a> developing software in investment strategies for international institutions.
     <br>
-    Chess player with +2.200 FIDE ELO (best 10k players in the world).
+    Chess player with +2.200 FIDE ELO (top 2% in the world).
   "
   image: "/me.png"
 
@@ -17,9 +17,10 @@ about:
   content: '
     I am a 23 years old Software Engineer from Girona, Spain.
     <br>
-    My area of focus lies in designing web and mobile products, user research as well as
-    leading of design & front-end teams. I enjoy designing and coding the UI as much as
-    talking with users to iterate and improve the experiences that reach business goals.
+    My area of focus lies in designing and coding websites as well as
+    leading frontend teams.
+    <br>
+    I am also a chess player with +2.200 FIDE ELO (top 2% in the world).
   '
 
 # experience
@@ -29,7 +30,7 @@ experience:
   items:
     - title: "Front-End Developer"
       company: "ETS Factory"
-      duration: "Jul. 2020 - Currently"
+      duration: "Jun. 2020 - Currently"
       location: "Madrid, Spain"
       country: "/spain.png"
       description: "Software development related to recommending and managing investment funds"
