@@ -7,7 +7,7 @@
         </div>
         {{ if .Site.Data.homepage.publications.items }}
             {{ range .Site.Data.homepage.publications.items }}
-                <a href="#" class="column-4">
+                <a href="{{ .url }}" class="column-4" target="_blank">
                     <img class="card-image card-image-publication" src="{{ .image }}">
                     <div class="title title-award"> {{ .name }} </div>
                     <div class="subtitle"> {{ .organisation }} </div>

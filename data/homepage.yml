@@ -348,7 +348,7 @@ publications:
         organisation: "University of Girona"
         date: "June 2019"
         image: "/bachelor_thesis.png"
-        url: "#"
+        url: "/tfg.pdf"
 
 # awards
 awards:
