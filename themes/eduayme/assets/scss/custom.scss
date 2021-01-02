@@ -103,7 +103,7 @@ html {
 }
 
 /* Responsive columns */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 936px) {
     .column-10 {
         width: 15%;
         display: block;
@@ -111,6 +111,25 @@ html {
     }
     .cards-container {
         margin: 0 -1% 20px -1%;
+    }
+    .left-small {
+        width: 100%;
+    }
+    .right-small {
+        float: left !important;
+        font-size: 1rem;
+        width: 100%;
+    }
+    .small-info {
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    .duration,
+    .year,
+    .loc-exp,
+    .loc-edu {
+        width: auto !important;
+        margin-top: 10px;
     }
 }
 @media screen and (max-width: 600px) {
@@ -138,10 +157,21 @@ html {
     .top-info {
         margin-bottom: 50px !important;
     }
+    .right-info {
+        margin-top: 10px;
+        float: left !important;
+    }
+    .left-small {
+        width: 100%;
+    }
     .right-small {
         float: left !important;
         font-size: 1rem;
         width: 100%;
+    }
+    .small-info {
+        margin-top: 10px !important;
+        margin-bottom: 15px !important;
     }
     .duration,
     .year,
@@ -149,10 +179,6 @@ html {
     .loc-edu {
         width: auto !important;
         margin-top: 10px;
-    }
-    .right-info {
-        margin-top: 10px;
-        float: left !important;
     }
 }
 
