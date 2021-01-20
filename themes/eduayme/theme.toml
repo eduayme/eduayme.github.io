@@ -2,7 +2,7 @@ name = "eduayme"
 license = "MIT"
 licenselink = "https://github.com/eduayme/eduayme-hugo-theme/blob/master/LICENSE"
 description = "A nice blog developed in Hugo"
-tags = ["blog", "dark"]
+tags = ["blog", "tech", "code", "web", "Eduard Aymerich"]
 features = ["darkmode"]
 min_version = "0.54.0"
 
