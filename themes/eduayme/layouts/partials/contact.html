@@ -1,32 +1,32 @@
 <div class="inner posts" id="contact">
     <div class="container-contact">
-        <div class="left">
-            Contact
+        <div class="center title-left">
+            {{ i18n "contact_title" }}
         </div>
     </div>
-    <div class="no-padding">
+    <div class="form-container">
         <form
           action="https://formspree.io/f/xvoawnzw"
           method="POST"
         >
           <label>
-            Name
+            {{ i18n "name" }}
             <input type="text" name="name">
           </label>
           <label>
-            Email
+            {{ i18n "email" }}
             <input type="text" name="_replyto">
           </label>
           <label>
-            Subject
+            {{ i18n "subject" }}
             <input type="text" name="_subject">
           </label>
           <label>
-            Message
+            {{ i18n "message" }}
             <textarea name="message"></textarea>
           </label>
 
-          <button type="submit" class="submit-btn"> Send message </button>
+          <button type="submit" class="submit-btn"> {{ i18n "send_message" }} </button>
         </form>
     </div>
 </div>

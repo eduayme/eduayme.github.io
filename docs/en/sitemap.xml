@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://eduayme.github.io/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/blog/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/blog/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/categories/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/contact/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/contact/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/contact/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/tags/"
+                />
+  </url>
+  
+</urlset>

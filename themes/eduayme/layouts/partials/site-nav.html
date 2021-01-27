@@ -10,9 +10,15 @@
 
         <div class="site-nav-content">
             <ul class="nav" role="menu" id="topNav">
+                {{ range .Translations }}
+                    <li class="language">
+                        <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                    </li>
+                {{ end}}
+
                 {{ range sort $.Site.Menus.main "Weight" }}
                     <li class="nav-home" role="menuitem" id="{{- .Name -}}">
-                        <a href="{{ .URL }}">
+                        <a href="{{ .URL | absLangURL }}">
                             {{- .Name -}}
                         </a>
                     </li>
@@ -24,16 +30,16 @@
 </nav>
 
 <style>
-@media screen and (max-width: 800px) {
-    .site-nav-logo {
-        font-size: 14px;
+    @media screen and (max-width: 800px) {
+        .site-nav-logo {
+            font-size: 14px;
+        }
+        .nav li a {
+            font-size: 10px;
+            padding: 5px 15px;
+        }
+        .nav li a:last-child {
+            padding: 12px 15px;
+        }
     }
-    .nav li a {
-        font-size: 10px;
-        padding: 5px 15px;
-    }
-    .nav li a:last-child {
-        padding: 12px 15px;
-    }
-}
 </style>

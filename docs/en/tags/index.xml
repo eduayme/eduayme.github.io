@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Eduard Aymerich</title>
+    <link>https://eduayme.github.io/en/tags/</link>
+    <description>Recent content in Tags on Eduard Aymerich</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 22 Nov 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://eduayme.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML</title>
+      <link>https://eduayme.github.io/en/tags/html/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduayme.github.io/en/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Javascript</title>
+      <link>https://eduayme.github.io/en/tags/javascript/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduayme.github.io/en/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web Components</title>
+      <link>https://eduayme.github.io/en/tags/web-components/</link>
+      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduayme.github.io/en/tags/web-components/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

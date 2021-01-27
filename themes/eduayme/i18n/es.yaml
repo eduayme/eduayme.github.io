@@ -1,0 +1,209 @@
+# positions
+- id: frontend_dev
+  translation: "Desarrollador Front-End"
+- id: software_engineer
+  translation: "Ingeniero de Software"
+- id: software_intern
+  translation: "Becario de Software"
+- id: software_intern_techcamp
+  translation: "Becario de Software (Tech Camp 2.0)"
+- id: it_intern
+  translation: "Becario de TI"
+
+# date
+- id: "currently"
+  translation: "Actual"
+- id: "month_1"
+  translation: "Ene."
+- id: "month_2"
+  translation: "Feb."
+- id: "month_3"
+  translation: "Mar."
+- id: "month_4"
+  translation: "Abr."
+- id: "month_5"
+  translation: "May."
+- id: "month_6"
+  translation: "Jun."
+- id: "month_7"
+  translation: "Jul."
+- id: "month_8"
+  translation: "Ago."
+- id: "month_9"
+  translation: "Sep."
+- id: "month_10"
+  translation: "Oct."
+- id: "month_11"
+  translation: "Nov."
+- id: "month_12"
+  translation: "Dic."
+
+# countries
+- id: "spain"
+  translation: "España"
+- id: "germany"
+  translation: "Alemania"
+
+# blog
+- id: latest_posts
+  translation: "Últimos artículos"
+- id: all_posts
+  translation: "Todos los artículos"
+- id: related_posts
+  translation: "Artículos relacionados"
+- id: reading_time
+  translation:
+    one: "Un minuto de lectura"
+    other: "{{.Count}} minutos de lectura"
+- id: total_posts
+  translation:
+    one: "Total de un artículo"
+    other: "Total de {{.Count}} artículos"
+
+# about
+- id: about_me_title
+  translation: "Quién soy?"
+- id: about_me_info
+  translation: '
+    Soy un Ingeniero de Software de Girona, España, actualmente viviendo en Madrid.
+    <br>
+    Mi área se centra en diseño y programación de sitios web, principalmente en frontend.
+    <br>
+    También soy un jugador de ajedrez con +2.200 FIDE ELO (top 2% en el mundo).
+  '
+
+# career
+- id: experience_title
+  translation: "Experiencia"
+- id: desc_ets
+  translation: "Desarrollo de software relacionado con la recomendación y gestión de fondos de inversión."
+- id: desc_qonsius
+  translation: "Creación desde zero de una plataforma para las actividades de una startup Venture Builder."
+- id: desc_udg_wordpress
+  translation: "Creación de plantillas Wordpress para la Biblioteca de la Universidad de Girona."
+- id: desc_trivago
+  translation: "Seleccionado como 1 de los 10 programadores ganadores de más 150 participantes en el reto Tech Camp 2.0. <br><a href='https://tech.trivago.com/2018/09/27/nine-nations-united-in-code/' target='_blank'>Artículo en el blog de Trivago acerca de Tech Camp 2.0</a>"
+- id: desc_ntware
+  translation: "Creación de una guia de estilo interna para el desarrollo de software del producto UniFLOW de la empresa Canon Inc."
+- id: desc_udg_it
+  translation: "Servicios Técnicos de las bibliotecas. Mantenimiento de los PCs e impresoras."
+
+# studies
+- id: education_title
+  translation: "Educación"
+- id: university_udg
+  translation: "Universidad de Girona"
+- id: university_upm
+  translation: "Universidad Politécnica de Madrid"
+- id: constanza_school
+  translation: "Constanza Business & Protocol School"
+- id: remote
+  translation: "Remoto online"
+- id: bachelor_cs
+  translation: "Grado en Ingeniería Informática"
+- id: desc_bachelor_cs
+  translation: "Especialización en Ingeniería de Software. El grado en Ingeniería Informática de la Universidad de Girona ha recibido un título de excelencia de la Agencia Catalana de Universidades que solo el 10% de los cursos de Cataluña han recibido."
+- id: expertise_directive
+  translation: "Experto en Habilidades Directivas"
+- id: desc_expertise_directive
+  translation: "Curso online de 300 horas dirigido a adquirir las competencias más demandadas para los directivos: gestión del tiempo, productividad personal, motivación de equipos, dotes de liderazgo y capacidad para hablar bien en público."
+- id: master_cs
+  translation: "Máster en Ingeniería Informática"
+- id: desc_master_cs
+  translation: "Especialización en gestión de TI. El objetivo del máster es formar a los estudiantes para que sean líderes en los procesos de innovación y transformación digital que se están produciendo en la actualidad en nuestra sociedad."
+- id: master_leadership
+  translation: "Máster en Liderazgo Internacional"
+- id: desc_master_leadership
+  translation: "Programa de Alto Rendimiento con 15 de los mejores estudiantes de la UPM, desarrollado en el campus de la Fundación Rafael del Pino y en instituciones de excelencia situadas en China (Beijing Institute of Technology y Tongji University) y en Estados Unidos (MIT y Harvard)."
+
+# contact
+- id: contact_title
+  translation: "Contactar"
+- id: name
+  translation: "Nombre"
+- id: email
+  translation: "Email"
+- id: subject
+  translation: "Asunto"
+- id: message
+  translation: "Mensaje"
+- id: send_message
+  translation: "Enviar mensaje"
+
+# softskills
+- id: soft_skills_title
+  translation: "Soft skills"
+- id: endorsed_by
+  translation: "Reconocido por el Instituto de Ingeniería del Conocimiento"
+- id: business_thinking
+  translation: "Pensamiento empresarial"
+- id: achieving_goals
+  translation: "Alcanzar metas"
+- id: responding_change
+  translation: "Responder al cambio"
+- id: planning
+  translation: "Planificar y organizar"
+- id: working_with_people
+  translation: "Trabajar con gente"
+
+# hardskills
+- id: hard_skills_title
+  translation: "Hard skills"
+- id: show_all
+  translation: "Mostrar todo"
+- id: level_basic
+  translation: "Básico"
+- id: level_intermediate
+  translation: "Intermedio"
+- id: level_advance
+  translation: "Avanzado"
+- id: level_native
+  translation: "Nativo"
+- id: catalan
+  translation: "Catalán"
+- id: spanish
+  translation: "Español"
+- id: english
+  translation: "Inglés"
+- id: french
+  translation: "Francés"
+- id: german
+  translation: "Alemán"
+- id: languages
+  translation: "Idiomas"
+- id: prog_lang
+  translation: "Lenguajes de programación"
+- id: frameworks
+  translation: "Frameworks"
+- id: databases
+  translation: "Base de datos"
+- id: others
+  translation: "Otros"
+
+# publications
+- id: publications_title
+  translation: "Publicaciones"
+- id: bachelor_thesis
+  translation: "Trabajo Fin de Grado"
+- id: master_thesis
+  translation: "Trabajo Fin de Máster"
+
+# awards
+- id: awards_title
+  translation: "Premios"
+- id: awards_best_tfg
+  translation: "Mejor TFG de mi promoción"
+- id: awards_mundo_deportivo
+  translation: "Campeones 2017"
+- id: awards_esportiu
+  translation: "Excelencia en el deporte Gironí"
+- id: awards_catalan_master
+  translation: "Maestro Catalán"
+- id: awards_girona_absolute
+  translation: "Campeón Absoluto de Girona"
+- id: mundo_deportivo
+  translation: "Mundo Deportivo"
+- id: esportiu_cat
+  translation: "L'esportiu de CAT"
+- id: fcde
+  translation: "Federación Catalana Ajedrez"

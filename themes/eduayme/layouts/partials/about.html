@@ -6,10 +6,10 @@
             </div>
             <div class="right">
                 <div class="title-left">
-                    {{ .Site.Data.homepage.about.title }}
+                    {{ i18n "about_me_title" }}
                 </div>
                 <div class="info-text">
-                    {{ .Site.Data.homepage.about.content | safeHTML }}
+                    {{ i18n "about_me_info" | safeHTML }}
                 </div>
             </div>
         </div>
@@ -17,7 +17,8 @@
         <div class="no-padding">
             {{- partial "experience.html" . -}}
             {{- partial "education.html" . -}}
-            {{- partial "skills.html" . -}}
+            {{- partial "soft-skills.html" . -}}
+            {{- partial "hard-skills.html" . -}}
             {{- partial "publications.html" . -}}
             {{- partial "awards.html" . -}}
         </div>

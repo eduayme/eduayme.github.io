@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Components on Eduard Aymerich</title>
+    <link>https://eduayme.github.io/es/tags/web-components/</link>
+    <description>Recent content in Web Components on Eduard Aymerich</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://eduayme.github.io/es/tags/web-components/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Introducción a los Web Components</title>
+      <link>https://eduayme.github.io/es/introduction-to-web-components/</link>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://eduayme.github.io/es/introduction-to-web-components/</guid>
+      <description>Conceptos principales de los Web Components con ejemplos básicos</description>
+    </item>
+    
+  </channel>
+</rss>

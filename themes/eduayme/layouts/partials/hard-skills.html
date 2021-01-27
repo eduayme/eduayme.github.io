@@ -1,23 +1,33 @@
 {{ if .Site.Data.homepage.hardskills.enable }}
     <div class="container-align top-info">
         <div class="left">
-            {{ .Site.Data.homepage.hardskills.title }}
+            {{ i18n "hard_skills_title" }}
         </div>
+    </div>
+    <div id="filters">
+      <button class="btn-filter all active" onclick="filterSelection('all')"> {{ i18n "show_all" }} </button>
+      <button class="btn-filter languages" onclick="filterSelection('languages')"> {{ i18n "languages" }} </button>
+      <button class="btn-filter prog_lang" onclick="filterSelection('prog_lang')"> {{ i18n "prog_lang" }} </button>
+      <button class="btn-filter frameworks" onclick="filterSelection('frameworks')"> {{ i18n "frameworks" }} </button>
+      <button class="btn-filter databases" onclick="filterSelection('databases')"> {{ i18n "databases" }} </button>
+      <button class="btn-filter others" onclick="filterSelection('others')"> {{ i18n "others" }} </button>
     </div>
     {{ if .Site.Data.homepage.hardskills.items }}
         <div class="cards-container">
             {{ range .Site.Data.homepage.hardskills.items }}
-                <div class="column-10">
-                    <div class="card {{ .type }}">
+                    <div class="column-10 filterDiv {{ .type }}">
                         <div class="card-image-container">
                             <img class="card-image" src="{{ .image }}">
                         </div>
                         <div class="card-content">
-                            <div class="title">{{ .name }}</div>
-                            <div class="subtitle"> {{ .level }} </div>
+                            {{ if .isLanguage }}
+                                <div class="title">{{ i18n .name }}</div>
+                            {{ else }}
+                                <div class="title">{{ .name }}</div>
+                            {{ end }}
+                            <div class="subtitle"> {{ i18n .level }} </div>
                         </div>
                     </div>
-                </div>
             {{ end }}
         </div>
     {{ end }}
@@ -25,22 +35,131 @@
 {{ end }}
 
 <style media="screen">
-    .margin-bottom {
-        margin-bottom: 10px;
+    #filters {
+        margin-bottom: 20px;
+        text-align: center;
     }
-    .Language {
+    .filterDiv {
+      display: none;
+    }
+    .column-10 {
+        padding: 15px 5px 5px 5px;
+        transition: 0.3s;
+        width: 8%;
+        margin: 0 1% 2% 1%;
+        height: 120px;
+        border-radius: 5px;
+        border-top: 2px solid red;
+        text-align: center;
+    }
+    .column-10:hover {
+        background-color: #2b2c2e;
+    }
+    @media screen and (max-width: 936px) {
+        .column-10 {
+            width: 18%;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        .column-10 {
+            width: 30%;
+        }
+    }
+
+    .show {
+      display: inline-block;
+    }
+    .btn-filter {
+        margin: 5px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #f1f1f1;
+        color: black;
+    }
+    .btn-filter:hover {
+      background-color: #ddd;
+    }
+
+    .active {
+        color: white;
+    }
+    .all.active {
+      background-color: #666;
+    }
+    .languages.active {
+      background-color: #8D74FF;
+    }
+    .prog_lang.active {
+        background-color: #2b6eff;
+    }
+    .frameworks.active {
+        background-color: #c98900;
+    }
+    .databases.active {
+        background-color: #e200c4;
+    }
+    .others.active {
+        background-color: #e80000;
+    }
+
+    .languages {
         border-top-color: #8D74FF;
     }
-    .ProgrammingLanguage {
-        border-top-color: #00F8FA;
+    .prog_lang {
+        border-top-color: #2b6eff;
     }
-    .Framework {
-        border-top-color: #FFB91C;
+    .frameworks {
+        border-top-color: #c98900;
     }
-    .Database {
-        border-top-color: #FFA8F4;
+    .databases {
+        border-top-color: #e200c4;
     }
-    .Other {
-        border-top-color: #FF4747;
+    .others {
+        border-top-color: #e80000;
     }
 </style>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("filters");
+var btns = btnContainer.getElementsByClassName("btn-filter");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>

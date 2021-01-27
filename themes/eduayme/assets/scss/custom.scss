@@ -27,7 +27,6 @@ html {
     text-align: left !important;
 }
 .post-card {
-    text-align: center;
     min-height: 0;
 }
 .container-align {
@@ -411,7 +410,6 @@ input[type=text], select, textarea {
   color: black;
 }
 
-/* Style the submit button with a specific background color etc */
 .submit-btn {
   background-color: #E50914;
   border-color: #E50914;
@@ -424,7 +422,11 @@ input[type=text], select, textarea {
   margin-bottom: 20px;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
 .submit-btn:hover {
   box-shadow: 0 4px 8px 0 #E50914;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
 }

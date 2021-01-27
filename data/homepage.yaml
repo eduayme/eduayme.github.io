@@ -1,0 +1,392 @@
+# banner
+banner:
+  enable: true
+  position: "frontend_dev"
+
+# about
+about:
+  enable: true
+  image: "/me.jpeg"
+
+# experience
+experience:
+  enable: true
+  items:
+    - title: "frontend_dev"
+      company: "ETS Factory"
+      start_month: "month_6"
+      start_year: "2020"
+      end_month: "currently"
+      end_year: ""
+      city: "Madrid"
+      country: "spain"
+      description: "desc_ets"
+      logo: "/ets.png"
+      banner_logos: true
+      url: "https://etsfactory.com"
+      skills:
+          - HTML
+          - CSS
+          - Javascript
+          - ES6
+          - VueJS
+          - NuxtJS
+          - Highcharts
+          - Git
+          - Gitlab
+          - Figma
+
+    - title: "software_engineer"
+      company: "Qonsius Ventures"
+      start_month: "month_8"
+      start_year: "2019"
+      end_month: "month_11"
+      end_year: "2019"
+      city: "Madrid"
+      country: "spain"
+      description: "desc_qonsius"
+      logo: "/qonsius.png"
+      banner_logos: true
+      url: "https://qonsius.com"
+      skills:
+          - HTML
+          - CSS
+          - Javascript
+          - JQuery
+          - Python
+          - Django
+          - Bootstrap
+          - Google Apps Script
+          - Git
+
+    - title: "frontend_dev"
+      company: "Universitat de Girona"
+      start_month: "month_4"
+      start_year: "2019"
+      end_month: "month_7"
+      end_year: "2019"
+      city: "Girona"
+      country: "spain"
+      description: "desc_udg_wordpress"
+      logo: "/udg.png"
+      banner_logos: true
+      url: "https://www.udg.edu/en/"
+      skills:
+          - HTML
+          - CSS
+          - Javascript
+          - JQuery
+          - Wordpress
+          - Bootstrap
+          - Git
+
+    - title: "software_intern_techcamp"
+      company: "Trivago"
+      start_month: "month_9"
+      start_year: "2018"
+      end_month: "month_9"
+      end_year: "2018"
+      city: "Düsseldorf"
+      country: "germany"
+      description: "desc_trivago"
+      logo: "/trivago.png"
+      banner_logos: true
+      url: "https://www.trivago.com"
+      skills:
+          - HTML
+          - CSS
+          - Javascript
+          - JQuery
+          - C#
+          - .NET
+          - Bootstrap
+          - MySQL
+          - Git
+          - Gitlab
+
+    - title: "software_intern"
+      company: "NT-ware"
+      start_month: "month_7"
+      start_year: "2018"
+      end_month: "month_8"
+      end_year: "2018"
+      city: "Bad Iburg"
+      country: "germany"
+      description: "desc_ntware"
+      logo: "/nt-ware.png"
+      banner_logos: true
+      url: "https://www.nt-ware.com"
+      skills:
+          - HTML
+          - CSS
+          - Javascript
+          - Jira
+          - Bitbucket
+          - Docker
+          - Git
+          - Adobe XD
+
+    - title: "it_intern"
+      company: "Universitat de Girona"
+      start_month: "month_10"
+      start_year: "2016"
+      end_month: "month_6"
+      end_year: "2017"
+      city: "Girona"
+      country: "spain"
+      description: "desc_udg_it"
+      logo: "/udg.png"
+      banner_logos: false
+      url: "https://www.udg.edu/en/"
+      skills:
+          - IT support
+
+# education
+education:
+  enable: true
+  items:
+    - university: "university_upm"
+      start_year: "2020"
+      end_year: "2022"
+      city: "Madrid"
+      country: "spain"
+      degree: "master_leadership"
+      description: "desc_master_leadership"
+
+    - university: "university_upm"
+      start_year: "2019"
+      end_year: "2021"
+      city: "Madrid"
+      country: "spain"
+      degree: "master_cs"
+      description: "desc_master_cs"
+
+    - university: "constanza_school"
+      start_year: "2019"
+      end_year: "2020"
+      remote: true
+      degree: "expertise_directive"
+      description: "desc_expertise_directive"
+
+    - university: "university_udg"
+      start_year: "2015"
+      end_year: "2019"
+      city: "Girona"
+      country: "spain"
+      degree: "bachelor_cs"
+      description: "desc_bachelor_cs"
+
+# softskills
+softskills:
+  enable: true
+  items:
+      - name: "business_thinking"
+        image: "/business_thinking.svg"
+
+      - name: "achieving_goals"
+        image: "/achieving_goals.svg"
+
+      - name: "responding_change"
+        image: "/responding_change.svg"
+
+      - name: "planning"
+        image: "/planning.svg"
+
+      - name: "working_with_people"
+        image: "/working_with_people.svg"
+
+# hardskills
+hardskills:
+  enable: true
+  items:
+      - name: "catalan"
+        level: "level_native"
+        image: "/catalonia.svg"
+        type: "languages"
+        isLanguage: true
+
+      - name: "spanish"
+        level: "level_native"
+        image: "/spain.png"
+        type: "languages"
+        isLanguage: true
+
+      - name: "english"
+        level: "level_advance"
+        image: "/uk.png"
+        type: "languages"
+        isLanguage: true
+
+      - name: "french"
+        level: "level_basic"
+        image: "/france.png"
+        type: "languages"
+        isLanguage: true
+
+      - name: "german"
+        level: "level_basic"
+        image: "/germany.png"
+        type: "languages"
+        isLanguage: true
+
+      - name: "HTML"
+        level: "level_intermediate"
+        image: "/html.png"
+        type: "prog_lang"
+
+      - name: "CSS"
+        level: "level_intermediate"
+        image: "/css.png"
+        type: "prog_lang"
+
+      - name: "Javascript"
+        level: "level_intermediate"
+        image: "/js.png"
+        type: "prog_lang"
+
+      - name: "PHP"
+        level: "level_intermediate"
+        image: "/php.png"
+        type: "prog_lang"
+
+      - name: "Java"
+        level: "level_intermediate"
+        image: "/java.png"
+        type: "prog_lang"
+
+      - name: "Python"
+        level: "level_basic"
+        image: "/python.png"
+        type: "prog_lang"
+
+      - name: "C++"
+        level: "level_basic"
+        image: "/c++.png"
+        type: "prog_lang"
+
+      - name: "Vue"
+        level: "level_intermediate"
+        image: "/vue.png"
+        type: "frameworks"
+
+      - name: "Nuxt"
+        level: "level_basic"
+        image: "/nuxt.svg"
+        type: "frameworks"
+
+      - name: "React"
+        level: "level_basic"
+        image: "/react.png"
+        type: "frameworks"
+
+      - name: "Laravel"
+        level: "level_basic"
+        image: "/laravel.png"
+        type: "frameworks"
+
+      - name: "Bootstrap"
+        level: "level_intermediate"
+        image: "/bootstrap.jpg"
+        type: "frameworks"
+
+      - name: "MySQL"
+        level: "level_intermediate"
+        image: "/mysql.png"
+        type: "databases"
+
+      - name: "PostgreSQL"
+        level: "level_intermediate"
+        image: "/postgresql.png"
+        type: "databases"
+
+      - name: "Firebase"
+        level: "level_basic"
+        image: "/firebase.jpg"
+        type: "databases"
+
+      - name: "Git"
+        level: "level_intermediate"
+        image: "/git.png"
+        type: "others"
+
+      - name: "Wordpress"
+        level: "level_intermediate"
+        image: "/wordpress.png"
+        type: "others"
+
+      - name: "Jenkins"
+        level: "level_basic"
+        image: "/jenkins.png"
+        type: "others"
+
+      - name: "Figma"
+        level: "level_intermediate"
+        image: "/figma.png"
+        type: "others"
+
+      - name: "Adobe XD"
+        level: "level_basic"
+        image: "/adobexd.png"
+        type: "others"
+
+      - name: "Github"
+        level: "level_intermediate"
+        image: "/github.png"
+        type: "others"
+
+      - name: "Gitlab"
+        level: "level_intermediate"
+        image: "/gitlab.png"
+        type: "others"
+
+# publications
+publications:
+  enable: true
+  items:
+      - name: "bachelor_thesis"
+        organisation: "university_udg"
+        date_month: "month_6"
+        date_year: "2019"
+        language: "catalan"
+        image: "/bachelor_thesis.png"
+        url: "/tfg.pdf"
+
+# awards
+awards:
+  enable: true
+  items:
+      - name: "awards_best_tfg"
+        organisation: "university_udg"
+        date_month: "month_7"
+        date_year: "2020"
+        image: "/udg.jpeg"
+
+      - name: "awards_mundo_deportivo"
+        organisation: "mundo_deportivo"
+        date_month: "month_10"
+        date_year: "2017"
+        image: "/mundodeportivo.png"
+
+      - name: "awards_esportiu"
+        organisation: "esportiu_cat"
+        date_month: "month_10"
+        date_year: "2017"
+        image: "/esportiu_cat.jpg"
+
+      - name: "awards_catalan_master"
+        organisation: "fcde"
+        date_month: "month_03"
+        date_year: "2017"
+        image: "/federacio_escacs_cat.jpg"
+
+      - name: "awards_girona_absolute"
+        organisation: "fcde"
+        date_month: "month_11"
+        date_year: "2015"
+        image: "/federacio_escacs_cat.jpg"
+
+# contact
+contact:
+  enable: true
+  title: "Contact"
+  email: eduardaymerich@gmail.com

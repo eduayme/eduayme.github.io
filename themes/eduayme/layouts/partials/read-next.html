@@ -1,7 +1,7 @@
 {{ if .Params.tags }}
     <article class="read-next-card">
         <header class="read-next-card-header">
-            Related posts
+            {{ i18n "related_posts" }}
         </header>
         <div class="read-next-card-content">
             {{ $related := .Site.RegularPages.Related . | first 5 }}
@@ -14,7 +14,7 @@
                             <p>
                                 <time datetime="{{.Date.Format "2006-31-01"}}">{{.Date.Format "01 Jan 2006"}}</time>
                                 <span class="bull">&bull;</span>
-                                {{ .ReadingTime }} min read
+                                {{ i18n "reading_time" .ReadingTime }}
                             </p>
                         </div>
                     </li>

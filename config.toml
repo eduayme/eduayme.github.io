@@ -1,6 +1,5 @@
 title = "Eduard Aymerich"
 author = "Eduard Aymerich"
-languageCode = "en-us"
 enableInlineShortcodes = true
 footnoteReturnLinkContents = "^"
 paginate = 10
@@ -9,29 +8,68 @@ theme = "eduayme"
 baseURL = "https://eduayme.github.io/"
 publishDir = "docs"
 
-[params]
-    author = "Eduard Aymerich"
-    cv = "https://drive.google.com/file/d/19pngaaUIYw64qDwDtYOzwMM6Wug5ohH8/view?usp=sharing"
-    linkedin = "https://linkedin.com/in/eduayme"
-    github = "https://github.com/eduayme"
-    instagram = ""
-    uplabs = ""
-    dribble = ""
-    codepen = ""
+DefaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
-[menu]
-    [[menu.main]]
-        identifier = "about"
-        name = "about"
-        url = "/about"
-        weight = 5
-    [[menu.main]]
-        identifier = "blog"
-        name = "blog"
-        url = "/blog"
-        weight = 10
-    [[menu.main]]
-        identifier = "contact"
-        name = "contact"
-        url = "/contact"
-        weight = 15
+[languages]
+    [languages.en]
+        languageName = "English"
+        [languages.en.params]
+            author = "Eduard Aymerich"
+            cv = "https://drive.google.com/file/d/19pngaaUIYw64qDwDtYOzwMM6Wug5ohH8/view?usp=sharing"
+            cv_download = "Download CV"
+            about = "About me"
+            linkedin = "https://linkedin.com/in/eduayme/?locale=en_US"
+            github = "https://github.com/eduayme"
+            instagram = ""
+            uplabs = ""
+            dribble = ""
+            codepen = ""
+
+        [languages.en.menu]
+            [[languages.en.menu.main]]
+                identifier = "about"
+                name = "about"
+                url = "/about"
+                weight = 5
+            [[languages.en.menu.main]]
+                identifier = "blog"
+                name = "blog"
+                url = "/blog"
+                weight = 10
+            [[languages.en.menu.main]]
+                identifier = "contact"
+                name = "contact"
+                url = "/contact"
+                weight = 15
+
+    [languages.es]
+        languageName = "Español"
+        [languages.es.params]
+            author = "Eduard Aymerich"
+            cv = "https://drive.google.com/file/d/1a_tAzCwH-tYSI4NdAF1mcdUCca-BPAvg/view?usp=sharing"
+            cv_download = "Descargar CV"
+            about = "Acerca de mi"
+            linkedin = "https://linkedin.com/in/eduayme"
+            github = "https://github.com/eduayme"
+            instagram = ""
+            uplabs = ""
+            dribble = ""
+            codepen = ""
+
+        [languages.es.menu]
+            [[languages.es.menu.main]]
+                identifier = "about"
+                name = "acerca de mi"
+                url = "/about"
+                weight = 5
+            [[languages.es.menu.main]]
+                identifier = "blog"
+                name = "blog"
+                url = "/blog"
+                weight = 10
+            [[languages.es.menu.main]]
+                identifier = "contact"
+                name = "contacto"
+                url = "/contact"
+                weight = 15

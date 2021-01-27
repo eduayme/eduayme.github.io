@@ -1,10 +1,10 @@
 {{ if .Site.Data.homepage.softskills.enable }}
     <div class="container-align top-info">
         <div class="left">
-            {{ .Site.Data.homepage.softskills.title }}
+            {{ i18n "soft_skills_title" }}
         </div>
         <div class="right-info">
-            {{ .Site.Data.homepage.softskills.endorsed }}
+            *{{ i18n "endorsed_by" }}
         </div>
     </div>
     {{ if .Site.Data.homepage.softskills.items }}
@@ -16,7 +16,7 @@
                             <img class="card-image card-image-big" src="{{ .image }}">
                         </div>
                         <div class="card-content">
-                            <div class="title"> {{ .name }} </div>
+                            <div class="title"> {{ i18n .name }} </div>
                         </div>
                     </div>
                 </div>

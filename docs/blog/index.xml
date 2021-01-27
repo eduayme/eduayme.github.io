@@ -5,20 +5,9 @@
     <link>https://eduayme.github.io/blog/</link>
     <description>Recent content in Blog on Eduard Aymerich</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 22 Nov 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://eduayme.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Introducción a los Web Components</title>
-      <link>https://eduayme.github.io/introduccion-web-components/</link>
-      <pubDate>Sun, 22 Nov 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduayme.github.io/introduccion-web-components/</guid>
-      <description>Conceptos principales de los Web Components con ejemplos básicos</description>
-    </item>
     
   </channel>
 </rss>

@@ -33,8 +33,8 @@
                                     <span class="byline-reading-time">{{ .Param "author" }}</span>
                                     <span class="bull">&bull;</span>
                                 {{ end }}
-                                <time class="byline-meta-date" datetime="{{.Date.Format "2006-31-01"}}">{{.Date.Format "2 January 2006"}}</time>
-                                <span class="byline-reading-time"><span class="bull">&bull;</span> {{ .ReadingTime }} min read</span>
+                                <time class="byline-meta-date" datetime="{{.Date.Format "2006-31-01"}}">{{ .Date.Day }} {{ i18n (print "month_" (string (printf "%d" .Date.Month))) }} {{ .Date.Year }}</time>
+                                <span class="byline-reading-time"><span class="bull">&bull;</span> {{ i18n "reading_time" .ReadingTime }}</span>
                             </div>
                         </section>
                     </section>
