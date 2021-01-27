@@ -9,11 +9,7 @@
         <div class="inner site-header-content">
             <h1 class="site-title">{{ .Title }}</h1>
             <h2 class="site-description">
-                {{ if .Param "description" }}
-                    {{ .Param "description" }}
-                {{ else }}
-                    A total of {{ len .Pages }} post{{ if gt (len .Pages) 1 }}s{{ end }}
-                {{ end }}
+                {{ i18n "total_posts" (len .Pages) }}
             </h2>
         </div>
     </div>

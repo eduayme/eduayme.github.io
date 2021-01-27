@@ -1,7 +1,7 @@
 {{ if .Site.Data.homepage.experience.enable }}
     <div class="container-align">
-        <div class="left" style="padding-bottom: 50px; width: 100%">
-            {{ .Site.Data.homepage.experience.title }}
+        <div class="left left-title">
+            {{ i18n "experience_title" }}
         </div>
     </div>
     <div class="experience-content">
@@ -10,7 +10,7 @@
             <div class="experience">
                 <div class="container-align no-bottom top-info">
                     <div class="left-small">
-                        {{ .title }}
+                        {{ i18n .title }}
                     </div>
                     <div class="right-small">
                         <div class="small-info">
@@ -18,16 +18,16 @@
                         </div>
                         <div class="small-info separator"> | </div>
                         <div class="small-info duration">
-                            {{ .duration }}
+                            {{ i18n .start_month }} {{ .start_year }} - {{ i18n .end_month }} {{ .end_year }}
                         </div>
                         <div class="small-info separator"> | </div>
                         <div class="small-info loc-exp">
-                            {{ .location }}
+                            {{ .city }}, {{ i18n .country }}
                         </div>
                     </div>
                 </div>
                 <div class="description">
-                    {{ .description | safeHTML }}
+                    {{ i18n .description | safeHTML }}
                 </div>
                 {{ range .skills }}
                     <div class="skill {{ . }}">
@@ -41,6 +41,10 @@
 {{ end }}
 
 <style media="screen">
+    .left-title {
+        padding-bottom: 50px;
+        width: 100%;
+    }
     .experience-content {
         margin-bottom: 150px;
     }
@@ -53,21 +57,20 @@
         margin-bottom: 20px;
     }
     .separator {
-        margin: 0 10px;
+        margin: 0 5px;
     }
     .skill {
         display: inline-block;
-        margin: 10px 10px 10px 0;
+        margin: 10px 10px 0 0;
         padding: 0 10px;
         border-radius: 50px;
         background-color: purple;
         color: white;
         font-size: 12px;
     }
-    .duration {
-        width: 170px;
-    }
-    .loc-exp {
-        width: 150px;
+    @media screen and (max-width: 600px) {
+        .description {
+            margin-bottom: 10px;
+        }
     }
 </style>

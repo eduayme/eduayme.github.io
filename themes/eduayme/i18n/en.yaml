@@ -1,0 +1,209 @@
+# positions
+- id: frontend_dev
+  translation: "Front-End Developer"
+- id: software_engineer
+  translation: "Software Engineer"
+- id: software_intern
+  translation: "Software Intern"
+- id: software_intern_techcamp
+  translation: "Software Intern (Tech Camp 2.0)"
+- id: it_intern
+  translation: "IT Intern"
+
+# date
+- id: "currently"
+  translation: "Currently"
+- id: "month_1"
+  translation: "Jan."
+- id: "month_2"
+  translation: "Feb."
+- id: "month_3"
+  translation: "Mar."
+- id: "month_4"
+  translation: "Apr."
+- id: "month_5"
+  translation: "May"
+- id: "month_6"
+  translation: "Jun."
+- id: "month_7"
+  translation: "Jul."
+- id: "month_8"
+  translation: "Aug."
+- id: "month_9"
+  translation: "Sep."
+- id: "month_10"
+  translation: "Oct."
+- id: "month_11"
+  translation: "Nov."
+- id: "month_12"
+  translation: "Dec."
+
+# countries
+- id: "spain"
+  translation: "Spain"
+- id: "germany"
+  translation: "Germany"
+
+# blog
+- id: latest_posts
+  translation: "Latest posts"
+- id: all_posts
+  translation: "All posts"
+- id: related_posts
+  translation: "Related posts"
+- id: reading_time
+  translation:
+    one: "One minute read"
+    other: "{{.Count}} minutes read"
+- id: total_posts
+  translation:
+    one: "A total of one post"
+    other: "A total of {{.Count}} posts"
+
+# about
+- id: about_me_title
+  translation: "Who am I?"
+- id: about_me_info
+  translation: '
+    I am a Software Engineer from Girona, Spain currently living in Madrid.
+    <br>
+    My area of focus lies in designing and coding websites, mainly the frontend part.
+    <br>
+    I am also a chess player with +2.200 FIDE ELO (top 2% in the world).
+  '
+
+# career
+- id: experience_title
+  translation: "Experience"
+- id: desc_ets
+  translation: "Software development related to recommending and managing investment funds."
+- id: desc_qonsius
+  translation: "Building a platform from scratch to manage all activities inside the Venture Builder startup."
+- id: desc_udg_wordpress
+  translation: "Wordpress themes creation for the University of Girona libraries"
+- id: desc_trivago
+  translation: "Selected as 1 of the 10 top programmers winners of more than 150 participants in the Tech Camp 2.0 challenge. <br><a href='https://tech.trivago.com/2018/09/27/nine-nations-united-in-code/' target='_blank'>Link to the Trivago post about Tech Camp 2.0</a>"
+- id: desc_ntware
+  translation: "Creation of an internal style guide for the development of UniFLOW product for the Canon Inc company."
+- id: desc_udg_it
+  translation: "Technical Services at UdG's libraries. PCs and printers mantainer."
+
+# studies
+- id: education_title
+  translation: "Education"
+- id: university_udg
+  translation: "University of Girona"
+- id: university_upm
+  translation: "Technical University of Madrid"
+- id: constanza_school
+  translation: "Constanza Business & Protocol School"
+- id: remote
+  translation: "Remote online"
+- id: bachelor_cs
+  translation: "Bachelor's Degree in Computer Science"
+- id: desc_bachelor_cs
+  translation: "Software Engineering specialization. The bachelor's degree in Computer Engineering at the University of Girona has received a qualification of excellence from the Catalan Universities Agency. Only 10% of the courses in Catalonia have received this award."
+- id: expertise_directive
+  translation: "Expertise in Directive Skills"
+- id: desc_expertise_directive
+  translation: "300-hour online course aimed at acquiring the most demanded skills for managers: time management, personal productivity, team motivation, leadership skills and the ability to speak well in public."
+- id: master_cs
+  translation: "Master's Degree in Computer Science"
+- id: desc_master_cs
+  translation: "IT management specialization. The goal of this Master Degree is to train students to be the leaders in the processes of innovation and digital trasformation that are going on nowadays in our society."
+- id: master_leadership
+  translation: "Master's Degree in International Leadership"
+- id: desc_master_leadership
+  translation: "Top Performance program with 15 of the best students from the Technical University of Madrid, developed in the Rafael del Pino Foundation and in excellence campuses in China (Beijing Institute of Technology and Tongji University) and in United States (MIT and Harvard)."
+
+# contact
+- id: contact_title
+  translation: "Contact"
+- id: name
+  translation: "Name"
+- id: email
+  translation: "Email"
+- id: subject
+  translation: "Subject"
+- id: message
+  translation: "Message"
+- id: send_message
+  translation: "Send message"
+
+# softskills
+- id: soft_skills_title
+  translation: "Soft skills"
+- id: endorsed_by
+  translation: "Endorsed by Instituto de Ingeniería del Conocimiento"
+- id: business_thinking
+  translation: "Business thinking"
+- id: achieving_goals
+  translation: "Achieving goals"
+- id: responding_change
+  translation: "Responding to change"
+- id: planning
+  translation: "Planning & organising"
+- id: working_with_people
+  translation: "Working with people"
+
+# hardskills
+- id: hard_skills_title
+  translation: "Hard skills"
+- id: show_all
+  translation: "Show all"
+- id: level_basic
+  translation: "Basic"
+- id: level_intermediate
+  translation: "Intermediate"
+- id: level_advance
+  translation: "Advance"
+- id: level_native
+  translation: "Native"
+- id: catalan
+  translation: "Catalan"
+- id: spanish
+  translation: "Spanish"
+- id: english
+  translation: "English"
+- id: french
+  translation: "French"
+- id: german
+  translation: "German"
+- id: languages
+  translation: "Languages"
+- id: prog_lang
+  translation: "Programming languages"
+- id: frameworks
+  translation: "Frameworks"
+- id: databases
+  translation: "Databases"
+- id: others
+  translation: "Others"
+
+# publications
+- id: publications_title
+  translation: "Publicatons"
+- id: bachelor_thesis
+  translation: "Bachelor Thesis"
+- id: master_thesis
+  translation: "Master Thesis"
+
+# awards
+- id: awards_title
+  translation: "Awards"
+- id: awards_best_tfg
+  translation: "Best Bachelor Thesis in my promotion"
+- id: awards_mundo_deportivo
+  translation: "Champions 2017"
+- id: awards_esportiu
+  translation: "Excellence in Girona sports"
+- id: awards_catalan_master
+  translation: "Catalan Chess Master"
+- id: awards_girona_absolute
+  translation: "Girona Absolute Chess Champion 2015"
+- id: mundo_deportivo
+  translation: "Mundo Deportivo"
+- id: esportiu_cat
+  translation: "L'esportiu de CAT"
+- id: fcde
+  translation: "Catalan Chess Federation"

@@ -35,8 +35,8 @@
 
             <footer class="post-card-meta">
                     <div class="post-card-byline-content">
-                        <span class="post-card-byline-date"><time datetime="{{ .context.Date.Format "2006-31-01" }}">{{ .context.Date.Format "2 January 2006" }}</time>
-                        <span class="bull">&bull;</span> {{ .context.ReadingTime }} min read</span>
+                        <span class="post-card-byline-date"><time datetime="{{ .context.Date.Format "2006-31-01" }}">{{ .context.Date.Day }} {{ i18n (print "month_" (string (printf "%d" .context.Date.Month))) }} {{ .context.Date.Year }}</time>
+                        <span class="bull">&bull;</span> {{ i18n "reading_time" .context.ReadingTime }}</span>
                     </div>
                 </footer>
 

@@ -2,7 +2,7 @@
     <div class="inner posts" id="awards">
         <div class="container-align">
             <div class="left">
-                {{ .Site.Data.homepage.awards.title }}
+                {{ i18n "awards_title" }}
             </div>
         </div>
         {{ if .Site.Data.homepage.awards.items }}
@@ -14,9 +14,9 @@
                                 <img class="card-image card-image-big" src="{{ .image }}">
                             </div>
                             <div class="card-content">
-                                <div class="title title-award"> {{ .name }} </div>
-                                <div class="subtitle"> {{ .organisation }} </div>
-                                <div class="subtitle"> {{ .date }} </div>
+                                <div class="title title-award"> {{ i18n .name }} </div>
+                                <div class="subtitle"> {{ i18n .organisation }} </div>
+                                <div class="subtitle"> {{ i18n .date_month }} {{ .date_year }} </div>
                             </div>
                         </div>
                     </div>

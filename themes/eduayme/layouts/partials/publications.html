@@ -2,16 +2,17 @@
     <div class="inner posts" id="publications">
         <div class="container-align">
             <div class="left">
-                {{ .Site.Data.homepage.publications.title }}
+                {{ i18n "publications_title" }}
             </div>
         </div>
         {{ if .Site.Data.homepage.publications.items }}
             {{ range .Site.Data.homepage.publications.items }}
                 <a href="{{ .url }}" class="column-4" target="_blank">
                     <img class="card-image card-image-publication" src="{{ .image }}">
-                    <div class="title title-award"> {{ .name }} </div>
-                    <div class="subtitle"> {{ .organisation }} </div>
-                    <div class="subtitle"> {{ .date }} </div>
+                    <div class="title title-award"> {{ i18n .name }} </div>
+                    <div class="subtitle"> {{ i18n .organisation }} </div>
+                    <div class="subtitle"> {{ i18n .date_month }} {{ .date_year }} </div>
+                    <div class="subtitle"> {{ i18n .language }} </div>
                 </a>
             {{ end }}
         {{ end }}

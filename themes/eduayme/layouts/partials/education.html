@@ -1,7 +1,7 @@
 {{ if .Site.Data.homepage.education.enable }}
     <div class="container-align">
         <div class="left">
-            {{ .Site.Data.homepage.education.title }}
+            {{ i18n "education_title" }}
         </div>
     </div>
     <div class="education-content">
@@ -10,24 +10,28 @@
             <div class="experience">
                 <div class="container-align no-bottom top-info">
                     <div class="left-small">
-                        {{ .degree }}
+                        {{ i18n .degree }}
                     </div>
                     <div class="right-small">
                         <div class="small-info">
-                            {{ .university }}
+                            {{ i18n .university }}
                         </div>
                         <div class="small-info separator"> | </div>
                         <div class="small-info year">
-                            {{ .year }}
+                            {{ .start_year }} - {{ .end_year }}
                         </div>
                         <div class="small-info separator"> | </div>
                         <div class="small-info loc-edu">
-                            {{ .location }}
+                            {{ if .remote }}
+                                {{ i18n "remote" }}
+                            {{ else }}
+                                {{ .city }}, {{ i18n .country }}
+                            {{ end }}
                         </div>
                     </div>
                 </div>
                 <div class="description">
-                    {{ .description }}
+                    {{ i18n .description }}
                 </div>
             </div>
         {{ end }}
@@ -49,12 +53,6 @@
         margin-bottom: 20px;
     }
     .separator {
-        margin: 0 10px;
-    }
-    .year {
-        width: 100px;
-    }
-    .loc-edu {
-        width: 100px;
+        margin: 0 5px;
     }
 </style>
