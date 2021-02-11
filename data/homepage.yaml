@@ -13,11 +13,37 @@ experience:
   enable: true
   items:
     - title: "frontend_dev"
+      company: "WITH Madrid"
+      start_month: "month_2"
+      start_year: "2021"
+      end_month: "currently"
+      end_year: ""
+      city: "Madrid"
+      country: "spain"
+      description: "desc_with"
+      logo: "/with.png"
+      banner_logos: true
+      url: "https://with-madrid.com/"
+      skills:
+          - HTML
+          - CSS
+          - Javascript
+          - ES6
+          - Vue.js
+          - Nuxt.js
+          - Python
+          - Django
+          - Charts.js
+          - Git
+          - Gitlab
+          - Figma
+
+    - title: "frontend_dev"
       company: "ETS Factory"
       start_month: "month_6"
       start_year: "2020"
-      end_month: "currently"
-      end_year: ""
+      end_month: "month_2"
+      end_year: "2021"
       city: "Madrid"
       country: "spain"
       description: "desc_ets"
@@ -29,8 +55,8 @@ experience:
           - CSS
           - Javascript
           - ES6
-          - VueJS
-          - NuxtJS
+          - Vue.js
+          - Nuxt.js
           - Highcharts
           - Git
           - Gitlab
@@ -114,7 +140,7 @@ experience:
       country: "germany"
       description: "desc_ntware"
       logo: "/nt-ware.png"
-      banner_logos: true
+      banner_logos: false
       url: "https://www.nt-ware.com"
       skills:
           - HTML
@@ -218,7 +244,7 @@ hardskills:
         isLanguage: true
 
       - name: "french"
-        level: "level_basic"
+        level: "level_intermediate"
         image: "/france.png"
         type: "languages"
         isLanguage: true
@@ -264,13 +290,18 @@ hardskills:
         image: "/c++.png"
         type: "prog_lang"
 
+      - name: "C"
+        level: "level_basic"
+        image: "/c.png"
+        type: "prog_lang"
+
       - name: "Vue"
         level: "level_intermediate"
         image: "/vue.png"
         type: "frameworks"
 
       - name: "Nuxt"
-        level: "level_basic"
+        level: "level_intermediate"
         image: "/nuxt.svg"
         type: "frameworks"
 
@@ -284,9 +315,19 @@ hardskills:
         image: "/laravel.png"
         type: "frameworks"
 
+      - name: "Django"
+        level: "level_basic"
+        image: "/django.png"
+        type: "frameworks"
+
       - name: "Bootstrap"
         level: "level_intermediate"
         image: "/bootstrap.jpg"
+        type: "frameworks"
+
+      - name: "Tailwind"
+        level: "level_basic"
+        image: "/tailwindcss.png"
         type: "frameworks"
 
       - name: "MySQL"

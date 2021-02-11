@@ -1,4 +1,6 @@
 # positions
+- id: fullstack_dev
+  translation: "Full-Stack Developer"
 - id: frontend_dev
   translation: "Front-End Developer"
 - id: software_engineer
@@ -75,6 +77,8 @@
 # career
 - id: experience_title
   translation: "Experience"
+- id: desc_with
+  translation: "Chatbot development <a href='https://datanan.io/' target='_blank'>Datañan</a> as a self-service conversational business intelligence."
 - id: desc_ets
   translation: "Software development related to recommending and managing investment funds."
 - id: desc_qonsius
