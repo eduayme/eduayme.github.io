@@ -75,6 +75,8 @@
   '
 
 # career
+- id: experience_working
+  translation: "Experiencia trabajando en empresas increíbles"
 - id: experience_title
   translation: "Experiencia"
 - id: desc_with

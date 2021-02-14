@@ -95,7 +95,7 @@ experience:
       country: "spain"
       description: "desc_udg_wordpress"
       logo: "/udg.png"
-      banner_logos: true
+      banner_logos: false
       url: "https://www.udg.edu/en/"
       skills:
           - HTML
@@ -140,7 +140,7 @@ experience:
       country: "germany"
       description: "desc_ntware"
       logo: "/nt-ware.png"
-      banner_logos: false
+      banner_logos: true
       url: "https://www.nt-ware.com"
       skills:
           - HTML

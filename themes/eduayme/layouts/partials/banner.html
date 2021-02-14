@@ -31,6 +31,9 @@
             </div>
         </div>
         <div class="container-align margin-bottom" id="banner-experience">
+            <div class="title-experience-items">
+                {{ i18n "experience_working" }}
+            </div>
             <div class="container padding-sides">
                 {{ range .Site.Data.homepage.experience.items }}
                     {{ if .banner_logos }}
@@ -48,12 +51,12 @@
 
 <style media="screen">
     #banner-info {
-        height: 50vh;
+        height: 45vh;
         overflow: hidden;
         text-align: center;
     }
     #banner-experience {
-        height: 30vh;
+        height: 35vh;
         overflow: hidden;
     }
     .name {
@@ -122,6 +125,10 @@
         box-shadow: 0 4px 8px 0 black;
         background-color: white;
         filter: none;
+    }
+    .title-experience-items {
+        text-align: center;
+        padding: 10px;
     }
     @media screen and (max-width: 600px) {
         .column-logo-5 {
