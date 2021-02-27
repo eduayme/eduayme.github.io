@@ -12,7 +12,7 @@ about:
 experience:
   enable: true
   items:
-    - title: "frontend_dev"
+    - title: "fullstack_dev"
       company: "WITH Madrid"
       start_month: "month_2"
       start_year: "2021"
@@ -33,6 +33,7 @@ experience:
           - Nuxt.js
           - Python
           - Django
+          - Svelte
           - Charts.js
           - Git
           - Gitlab

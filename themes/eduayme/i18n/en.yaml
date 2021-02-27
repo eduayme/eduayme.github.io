@@ -120,7 +120,7 @@
 - id: master_leadership
   translation: "Master's Degree in International Leadership"
 - id: desc_master_leadership
-  translation: "Top Performance program with 15 of the best students from the Technical University of Madrid, developed in the Rafael del Pino Foundation and in excellence campuses in China (Beijing Institute of Technology and Tongji University) and in United States (MIT and Harvard)."
+  translation: "Top Performance program with 15 of the best students from the Technical University of Madrid, developed in the Rafael del Pino Foundation and in excellence campuses in United States (MIT and Harvard) ands China (Beijing Institute of Technology and Tongji University)."
 
 # contact
 - id: contact_title

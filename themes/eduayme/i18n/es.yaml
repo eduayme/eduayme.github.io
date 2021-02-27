@@ -120,7 +120,7 @@
 - id: master_leadership
   translation: "Máster en Liderazgo Internacional"
 - id: desc_master_leadership
-  translation: "Programa de Alto Rendimiento con 15 de los mejores estudiantes de la UPM, desarrollado en el campus de la Fundación Rafael del Pino y en instituciones de excelencia situadas en China (Beijing Institute of Technology y Tongji University) y en Estados Unidos (MIT y Harvard)."
+  translation: "Programa de Alto Rendimiento con 15 de los mejores estudiantes de la UPM, desarrollado en el campus de la Fundación Rafael del Pino y en instituciones de excelencia situadas en Estados Unidos (MIT y Harvard) y China (Beijing Institute of Technology y Tongji University)."
 
 # contact
 - id: contact_title
