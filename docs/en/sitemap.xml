@@ -3,21 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://eduayme.github.io/about/</loc>
+    <loc>https://eduayme.github.io/tags/blog/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://eduayme.github.io/es/about/"
+                href="https://eduayme.github.io/es/tags/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://eduayme.github.io/about/"
+                href="https://eduayme.github.io/tags/blog/"
                 />
   </url>
   
   <url>
     <loc>https://eduayme.github.io/blog/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -32,6 +34,7 @@
   
   <url>
     <loc>https://eduayme.github.io/categories/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -41,6 +44,140 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://eduayme.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/code/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/tags/code/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/tags/code/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/hugo/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/tags/hugo/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/tags/hugo/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/personal-project/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/tags/personal-project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/tags/personal-project/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/portfolio/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/tags/portfolio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/tags/portfolio/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/welcome/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/welcome/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/welcome/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/tags/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/categories/tech/</loc>
+    <lastmod>2021-01-27T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/categories/tech/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/categories/tech/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://eduayme.github.io/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://eduayme.github.io/es/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://eduayme.github.io/about/"
                 />
   </url>
   
@@ -55,34 +192,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://eduayme.github.io/contact/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://eduayme.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://eduayme.github.io/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://eduayme.github.io/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://eduayme.github.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://eduayme.github.io/tags/"
                 />
   </url>
   
