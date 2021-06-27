@@ -1,7 +1,7 @@
 # banner
 banner:
   enable: true
-  position: "frontend_dev"
+  position: "current_position"
 
 # about
 about:
@@ -29,11 +29,12 @@ experience:
           - CSS
           - Javascript
           - ES6
-          - Vue.js
-          - Nuxt.js
+          - Typescript
+          - Svelte
+          - Vue
+          - Nuxt
           - Python
           - Django
-          - Svelte
           - Charts.js
           - Git
           - Gitlab
