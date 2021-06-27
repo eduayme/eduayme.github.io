@@ -1,3 +1,7 @@
+# banner
+- id: current_position
+  translation: "Desarrollador Web Full-Stack especializado en Frontend con Vue y Svelte"
+
 # positions
 - id: fullstack_dev
   translation: "Desarrollador Full-Stack"
@@ -80,7 +84,7 @@
 - id: experience_title
   translation: "Experiencia"
 - id: desc_with
-  translation: "Desarrollo del chatbot <a href='https://datanan.io/' target='_blank'>Datañan</a> como un autoservicio de business intelligence conversacional."
+  translation: "Desarrollo de chatbots como inteligencia conversacional de autoservicio."
 - id: desc_ets
   translation: "Desarrollo de software relacionado con la recomendación y gestión de fondos de inversión."
 - id: desc_qonsius
