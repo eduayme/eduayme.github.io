@@ -5,55 +5,9 @@
     <link>https://eduayme.github.io/tags/</link>
     <description>Recent content in Tags on Eduard Aymerich</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 27 Jan 2021 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://eduayme.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Blog</title>
-      <link>https://eduayme.github.io/tags/blog/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduayme.github.io/tags/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Code</title>
-      <link>https://eduayme.github.io/tags/code/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduayme.github.io/tags/code/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Hugo</title>
-      <link>https://eduayme.github.io/tags/hugo/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduayme.github.io/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Personal project</title>
-      <link>https://eduayme.github.io/tags/personal-project/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduayme.github.io/tags/personal-project/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Portfolio</title>
-      <link>https://eduayme.github.io/tags/portfolio/</link>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://eduayme.github.io/tags/portfolio/</guid>
-      <description></description>
-    </item>
     
   </channel>
 </rss>
